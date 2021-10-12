@@ -5,7 +5,7 @@ import static java.sql.DriverManager.getConnection;
 
 public final class Database {
 
-   private static String jdbcURL = "jdbc:postgresql://192.168.100.4:5432/Hellios";
+   private static String jdbcURL = "jdbc:postgresql://localhost:5432/Hellios";
    private static String username = "postgres";
    private static String password = "root";
     private static Connection connect() throws SQLException {
