@@ -11,7 +11,7 @@ public class HelloApplication extends Application {
         static Stage st;
 @Override
 public void start(Stage stage) throws IOException {
-        stage.initStyle(StageStyle.UNDECORATED);
+        stage.initStyle(StageStyle.TRANSPARENT);
         st = stage;
         showSignInMenu(st);
         }
