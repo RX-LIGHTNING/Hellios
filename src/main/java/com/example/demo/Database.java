@@ -71,5 +71,11 @@ public final class Database {
 
         return result;
     }
+    public static void insertOrder (String userlogin, String photographname) throws SQLException {
+        Connection connection = connect();
+        Statement statement = connection.createStatement();
+            statement.executeUpdate("INSERT INTO orders (userlogin, photograph) VALUES ('" + userlogin + "','" + photographname + "')");
+        connection.close();
+    }
 
 }
