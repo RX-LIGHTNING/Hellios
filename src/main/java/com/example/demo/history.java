@@ -9,7 +9,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class history implements Initializable {
@@ -19,22 +20,16 @@ public class history implements Initializable {
     private TableColumn Photograph;
     @FXML
     private TableColumn Status;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ResultSet OrderList=Database.getOrders();
+        List<Order> OrderList = Database.getOrders();
         Photograph.setCellValueFactory(new PropertyValueFactory<>("Photograph"));
         Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
-            try {
-                while (OrderList.next()){
-                Order temp = new Order(OrderList.getString("photograph"),OrderList.getBoolean("status"));
-                    Table.getItems().add(temp);
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-
-
+        for (int i = 0; i < OrderList.size(); i++) {
+            Table.getItems().add(OrderList.get(i));
         }
-
     }
+
+}
 

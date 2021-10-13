@@ -9,7 +9,6 @@ import javafx.scene.image.ImageView;
 import java.sql.SQLException;
 
 public class PhotoGraphLabel {
-
     @FXML
     private Label Description;
     @FXML
@@ -21,7 +20,6 @@ public class PhotoGraphLabel {
         this.photographname.setText(name);
     }
     public void acceptOrder() throws SQLException {
-        Database.insertOrder(User.getLogin(),photographname.getText());
+        Database.insertOrder(photographname.getText());
     }
-
 }

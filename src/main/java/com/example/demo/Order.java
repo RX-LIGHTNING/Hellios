@@ -14,7 +14,8 @@ public class Order {
 
     public Order(String photograph, boolean status) {
         this.Photograph = photograph;
-        if(status==true) this.Status = "Done.";
-        else if(status==false) this.Status = "In progress.";
+        this.Status = status ? "Done." : "In progress.";
+//        if(status) this.Status = "Done.";
+//        else this.Status = "In progress.";
     }
 }
