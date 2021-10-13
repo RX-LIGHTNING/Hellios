@@ -4,41 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="database refactored">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/NotifyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Notify.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographsListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotoGraphLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographLabelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/history.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/History.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/History.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Photo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Photo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographLabel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographLabel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Registration.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/SingIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/SingIn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/HelloApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/History.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/History.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Photo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Photo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Photo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotoGraphLabel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographLabel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographLabel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Registration.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/SignIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/SignUp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/SingIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/SingIn.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/history.class" beforeDir="false" />
-    </list>
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Controllers rename and notification metod." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +132,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634114416016</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Controllers rename and norification metod.">
+      <created>1634123866370</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1634123866370</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Controllers rename and notification metod.">
+      <created>1634123879973</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1634123879973</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,7 +167,9 @@
     <MESSAGE value="1" />
     <MESSAGE value="Added some functions to make photographs list work" />
     <MESSAGE value="database refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="database refactored" />
+    <MESSAGE value="Controllers rename and norification metod." />
+    <MESSAGE value="Controllers rename and notification metod." />
+    <option name="LAST_COMMIT_MESSAGE" value="Controllers rename and notification metod." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
