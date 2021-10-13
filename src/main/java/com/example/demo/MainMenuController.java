@@ -3,31 +3,26 @@ package com.example.demo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.chart.PieChart;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class MainMenu implements Initializable {
+public class MainMenuController implements Initializable {
     @FXML
     private GridPane PhotoGrid;
     @FXML
     private Label Username;
     @FXML
     private BorderPane UIworkspace;
-
+    @FXML
+    private BorderPane NotificationBar;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,27 +35,35 @@ public class MainMenu implements Initializable {
     }
 
     @FXML
-    private void setPhotographSlide() throws IOException {
+    private void setPhotographsListSlide() throws IOException {
         UIworkspace.setCenter(loadScene("Photo"));
     }
 
     @FXML
-    private void signOut() throws IOException {
-        HelloApplication.showSignInMenu(HelloApplication.st);
+    private void setSignOutSlide() throws IOException {
+        ApplicationCoreController.showSignInMenu(ApplicationCoreController.st);
         User.clearUser();
     }
 
     @FXML
-    private void setOptionSlide() throws IOException {
+    private void setOptionsSlide() throws IOException {
         UIworkspace.setCenter(loadScene("Options"));
     }
 
     @FXML
-    private void setHistorySlide() throws IOException {
+    private void setOrderHistorySlide() throws IOException {
         UIworkspace.setCenter(loadScene("History"));
     }
-
+    @FXML
+    private void createNotification() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("Notify.fxml"));
+        Pane anchorPane = fxmlLoader.load();
+        NotifyController controller = fxmlLoader.getController();
+        controller.setData("Запись была успешно добавлена",10);
+        NotificationBar.setCenter(anchorPane);
+    }
     public static Parent loadScene(String scene) throws IOException {
-        return FXMLLoader.load(Objects.requireNonNull(MainMenu.class.getResource(scene + ".fxml")));
+        return FXMLLoader.load(Objects.requireNonNull(MainMenuController.class.getResource(scene + ".fxml")));
     }
 }

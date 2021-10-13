@@ -7,13 +7,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 import java.util.ResourceBundle;
 
-public class history implements Initializable {
+public class OrderHistoryController implements Initializable {
     @FXML
     private TableView<Order> Table;
     @FXML
@@ -23,7 +20,7 @@ public class history implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        List<Order> OrderList = Database.getOrders();
+        List<Order> OrderList = DatabaseController.getOrders();
         Photograph.setCellValueFactory(new PropertyValueFactory<>("Photograph"));
         Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
         for (int i = 0; i < OrderList.size(); i++) {

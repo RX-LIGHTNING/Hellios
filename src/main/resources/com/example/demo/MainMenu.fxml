@@ -7,22 +7,24 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #111111;" stylesheets="@Styles/DarkTheme.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainMenu">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #111111;" stylesheets="@Styles/DarkTheme.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainMenuController">
    <children>
-      <BorderPane fx:id="UIworkspace" layoutX="212.0" layoutY="31.0" prefHeight="460.0" prefWidth="538.0" />
+      <BorderPane fx:id="NotificationBar" layoutX="200.0" layoutY="-4.0" prefHeight="66.0" prefWidth="559.0" />
+      <BorderPane fx:id="UIworkspace" layoutX="212.0" layoutY="51.0" prefHeight="440.0" prefWidth="538.0" />
       <Pane prefHeight="500.0" prefWidth="213.0" style="-fx-background-color: #171717;">
          <children>
             <VBox id="NavBar" layoutX="1.0" layoutY="1.0" prefHeight="500.0" prefWidth="213.0">
                <children>
                   <Accordion />
                   <Label fx:id="Username" alignment="CENTER" contentDisplay="CENTER" prefHeight="66.0" prefWidth="213.0" text="Username" textAlignment="CENTER" textFill="#393939" />
-                  <Button mnemonicParsing="false" onAction="#setPhotographSlide" prefHeight="47.0" prefWidth="213.0" text="Photographs" textFill="#393939" />
-                  <Button mnemonicParsing="false" onAction="#setHistorySlide" prefHeight="45.0" prefWidth="226.0" text="Order History" textFill="#393939" />
-                  <Button mnemonicParsing="false" onAction="#setOptionSlide" prefHeight="45.0" prefWidth="218.0" text="Settings" textFill="#393939" />
+                  <Button mnemonicParsing="false" onAction="#setPhotographsListSlide" prefHeight="50.0" prefWidth="213.0" text="Photographs" textFill="#393939" />
+                  <Button mnemonicParsing="false" onAction="#setOrderHistorySlide" prefHeight="50.0" prefWidth="213.0" text="Order History" textFill="#393939" />
+                  <Button mnemonicParsing="false" onAction="#setOptionsSlide" prefHeight="50.0" prefWidth="213.0" text="Settings" textFill="#393939" />
+                  <Button mnemonicParsing="false" onAction="#setSignOutSlide" prefHeight="50.0" prefWidth="213.0" text="Sing out" />
+                  <Button mnemonicParsing="false" onAction="#createNotification" text="Button" />
                </children></VBox>
          </children>
       </Pane>
       <Button id="Extbtn" fx:id="ExitButton" layoutX="697.0" layoutY="-1.0" minHeight="18.0" minWidth="53.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="30.0" prefWidth="53.0" text="X" textAlignment="CENTER" textFill="#3c3939" wrapText="true" />
-      <Button layoutX="609.0" layoutY="-1.0" mnemonicParsing="false" onAction="#signOut" prefHeight="30.0" prefWidth="94.0" text="Sing out" />
    </children>
 </Pane>

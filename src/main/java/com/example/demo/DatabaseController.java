@@ -8,17 +8,20 @@ import java.util.Objects;
 
 
 
-public final class Database {
+public final class DatabaseController {
 
     private static final String jdbcURL = "jdbc:postgresql://localhost:5432/Hellios";
     private static final String username = "postgres";
     private static final String password = "root";
+
+    private static final String USER_INSERT_QUERY = "INSERT INTO Users (login, password) VALUES (?,?)";
+    private static final String ORDERS_INSERT_QUERY ="INSERT INTO orders (user_id, photograph_name) VALUES (?,?)";
+    private static final String USER_SELECT_QUERY = "SELECT * FROM users WHERE login = ? AND password = ?";
+    private static final String PHOTOGRAPH_SELECT_QUERY = "SELECT * FROM photographs";
+    private static final String ORDERS_SELECT_QUERY = "SELECT * FROM orders WHERE user_id = ?";
+
     private static Connection connection;
-    private static String USER_INSERT_QUERY = "INSERT INTO Users (login, password) VALUES (?,?)";
-    private static String ORDERS_INSERT_QUERY ="INSERT INTO orders (user_id, photograph_name) VALUES (?,?)";
-    private static String USER_SELECT_QUERY = "SELECT * FROM users WHERE login = ? AND password = ?";
-    private static String PHOTOGRAPH_SELECT_QUERY = "SELECT * FROM photographs";
-    private static String ORDERS_SELECT_QUERY = "SELECT * FROM orders WHERE user_id = ?";
+
     public static Connection getConnection() {
         try {
             if (Objects.isNull(connection) || connection.isClosed()) {

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="275.0" style="-fx-background-color: transparent; -fx-border-color: #171717; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.PhotoGraphLabel">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="275.0" style="-fx-background-color: transparent; -fx-border-color: #171717; -fx-border-radius: 5;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.PhotographLabelController">
    <children>
       <Button fx:id="commit" layoutX="-1.0" layoutY="116.0" mnemonicParsing="false" onAction="#acceptOrder" prefHeight="38.0" prefWidth="275.0" style="-fx-background-color: #191919; -fx-border-color: #171717;" text="Order" />
       <Label fx:id="photographname" alignment="CENTER" layoutY="1.0" prefHeight="30.0" prefWidth="275.0" text="Label" textAlignment="CENTER" wrapText="true" />

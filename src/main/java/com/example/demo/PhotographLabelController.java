@@ -3,12 +3,10 @@ package com.example.demo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.sql.SQLException;
 
-public class PhotoGraphLabel {
+public class PhotographLabelController {
     @FXML
     private Label Description;
     @FXML
@@ -20,6 +18,6 @@ public class PhotoGraphLabel {
         this.photographname.setText(name);
     }
     public void acceptOrder() throws SQLException {
-        Database.insertOrder(photographname.getText());
+        DatabaseController.insertOrder(photographname.getText());
     }
 }
