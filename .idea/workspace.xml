@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added admin tool">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Photograph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Photograph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DatabaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/DatabaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Photograph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Photograph.class" afterDir="false" />
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added photographers list edit for admin accounts">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographControl.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634285780298</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added photographers list edit for admin accounts">
+      <created>1634312932404</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1634312932404</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +222,8 @@
     <MESSAGE value="Controllers rename and norification metod." />
     <MESSAGE value="Controllers rename and notification metod." />
     <MESSAGE value="Added admin tool" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added admin tool" />
+    <MESSAGE value="Added photographers list edit for admin accounts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added photographers list edit for admin accounts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

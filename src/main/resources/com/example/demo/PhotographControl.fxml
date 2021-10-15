@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="540.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.PhotographEditController">
+   <children>
+      <TextField fx:id="PhotographName" alignment="CENTER" layoutX="339.0" layoutY="208.0" prefHeight="25.0" prefWidth="191.0" promptText="photograph name" />
+      <TextField fx:id="PhotographDescription" alignment="TOP_CENTER" layoutX="339.0" layoutY="254.0" prefHeight="111.0" prefWidth="191.0" promptText="description" />
+      <Button layoutX="445.0" layoutY="374.0" mnemonicParsing="false" onAction="#addPhotograph" prefHeight="25.0" prefWidth="85.0" text="Add" textAlignment="CENTER" wrapText="true" />
+      <TableView fx:id="PhotographTable" layoutX="14.0" layoutY="14.0" onMouseClicked="#showPhotographInfo" prefHeight="387.0" prefWidth="262.0">
+        <columns>
+          <TableColumn fx:id="PhotographColumn" prefWidth="129.0" text="Phtograph" />
+          <TableColumn fx:id="DescriptionColumn" prefWidth="132.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button layoutX="339.0" layoutY="374.0" mnemonicParsing="false" onAction="#updatePhotographInfo" prefHeight="25.0" prefWidth="85.0" text="Edit" textAlignment="CENTER" wrapText="true" />
+   </children>
+</Pane>
