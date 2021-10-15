@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.sql.SQLException;
+
 public final class User {
     public static String Login;
     public static Integer id;
@@ -7,12 +9,14 @@ public final class User {
     public static String getLogin() {
         return Login;
     }
-
+    public static boolean getStatus(){
+        return DatabaseController.getUserStatus(getLogin());
+    }
     public static Integer getId() {
         return id;
     }
 
-    public static void setLogin(String login) {
+    public static void setLogin(String login){
         Login = login;
     }
 

@@ -3,6 +3,7 @@ package com.example.demo;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
@@ -15,19 +16,21 @@ public class SignInController {
 
     @FXML
     protected void authorizationApply() throws NoSuchAlgorithmException, IOException, SQLException {
-        if(!LoginText.getText().isEmpty() && !PasswordText.getText().isEmpty()) {
+        if (!LoginText.getText().isEmpty() && !PasswordText.getText().isEmpty()) {
 
-            if( DatabaseController.isLoggedIn(LoginText.getText(),PasswordText.getText())) {
+            if (DatabaseController.isLoggedIn(LoginText.getText(), PasswordText.getText())) {
                 ApplicationCoreController.showMainMenu(ApplicationCoreController.st);
             }
-        }else System.out.println("Некорректные параметры");
+        } else System.out.println("Некорректные параметры");
     }
+
     @FXML
     protected void registrationApply() throws NoSuchAlgorithmException, IOException {
         ApplicationCoreController.showRegistrationMenu(ApplicationCoreController.st);
     }
+
     @FXML
-    protected void exitApplication(){
+    protected void exitApplication() {
         System.exit(1);
     }
 }

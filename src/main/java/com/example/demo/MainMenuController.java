@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -14,7 +15,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class MainMenuController implements Initializable {
+public final class MainMenuController implements Initializable {
     @FXML
     private GridPane PhotoGrid;
     @FXML
@@ -22,10 +23,14 @@ public class MainMenuController implements Initializable {
     @FXML
     private BorderPane UIworkspace;
     @FXML
-    private BorderPane NotificationBar;
+    private Button adminbutton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+     adminbutton.setVisible(false);
+     if(User.getStatus()){
+        adminbutton.setVisible(true);
+     }
         Username.setText("Welcome back, " + User.Login);
     }
 
@@ -49,20 +54,17 @@ public class MainMenuController implements Initializable {
     private void setOptionsSlide() throws IOException {
         UIworkspace.setCenter(loadScene("Options"));
     }
-
+    @FXML
+    private void setAdminPanel() throws IOException {
+      if(User.getStatus()) {
+            UIworkspace.setCenter(loadScene("Admin"));
+      }
+    }
     @FXML
     private void setOrderHistorySlide() throws IOException {
         UIworkspace.setCenter(loadScene("History"));
     }
     @FXML
-    private void createNotification() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("Notify.fxml"));
-        Pane anchorPane = fxmlLoader.load();
-        NotifyController controller = fxmlLoader.getController();
-        controller.setData("Запись была успешно добавлена",10);
-        NotificationBar.setCenter(anchorPane);
-    }
     public static Parent loadScene(String scene) throws IOException {
         return FXMLLoader.load(Objects.requireNonNull(MainMenuController.class.getResource(scene + ".fxml")));
     }
