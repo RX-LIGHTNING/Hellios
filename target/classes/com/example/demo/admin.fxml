@@ -8,16 +8,15 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="540.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AdminPanelController">
    <children>
-      <TableView fx:id="AdminTable" layoutX="14.0" layoutY="14.0" prefHeight="360.0" prefWidth="290.0" style="-fx-background-color: transparent;">
+      <TableView fx:id="AdminTable" layoutX="52.0" layoutY="74.0" prefHeight="292.0" prefWidth="437.0" style="-fx-background-color: transparent;">
         <columns>
-          <TableColumn fx:id="UserId" prefWidth="71.0" text="User" />
-          <TableColumn fx:id="Photograph" prefWidth="123.0" text="Photograph" />
-            <TableColumn fx:id="Status" prefWidth="95.0" text="Status" />
+          <TableColumn fx:id="UserId" prefWidth="120.0" text="User" />
+          <TableColumn fx:id="Photograph" prefWidth="164.0" text="Photograph" />
+            <TableColumn fx:id="Status" prefWidth="151.0" text="Status" />
         </columns>
       </TableView>
-      <Button layoutX="29.0" layoutY="374.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="25.0" prefWidth="274.0" text="End Selected dick" />
-      <TextField fx:id="PhotographName" alignment="CENTER" layoutX="339.0" layoutY="208.0" prefHeight="25.0" prefWidth="191.0" promptText="photograph name" />
-      <TextField fx:id="PhotographDescription" alignment="TOP_CENTER" layoutX="339.0" layoutY="254.0" prefHeight="111.0" prefWidth="191.0" promptText="description" />
-      <Button layoutX="339.0" layoutY="374.0" mnemonicParsing="false" onAction="#addPhotograph" prefHeight="25.0" prefWidth="191.0" text="Add photograph" textAlignment="CENTER" wrapText="true" />
+      <Button id="filter" layoutX="340.0" layoutY="366.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="31.0" prefWidth="149.0" stylesheets="@Styles/DarkTheme.css" text="End Selected dick" />
+      <TextField fx:id="FilterField" layoutX="60.0" layoutY="366.0" onAction="#filterTable" prefHeight="31.0" prefWidth="156.0" promptText="Filter" />
+      <Button id="filter" layoutX="216.0" layoutY="366.0" mnemonicParsing="false" onAction="#filterTable" prefHeight="25.0" prefWidth="92.0" stylesheets="@Styles/DarkTheme.css" text="filter" />
    </children>
 </Pane>

@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added photographers list edit for admin accounts">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographControl.fxml" afterDir="false" />
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added admin tool">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographControl.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographControl.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Styles/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Styles/DarkTheme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/AdminPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/AdminPanelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DatabaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/DatabaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographControl.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographControl.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographEditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographEditController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Styles/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Styles/DarkTheme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/admin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +37,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/demo/History.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Order.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zMAIdqtarReUpkOak9cGmUgw4c" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">

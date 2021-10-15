@@ -10,7 +10,7 @@ import java.util.Objects;
 
 public final class DatabaseController {
 
-    private static final String jdbcURL = "jdbc:postgresql://localhost:5432/Hellios";
+    private static final String jdbcURL = "jdbc:postgresql://192.168.100.4:5432/Hellios";
     private static final String username = "postgres";
     private static final String password = "root";
 
@@ -23,6 +23,7 @@ public final class DatabaseController {
     private static final String ADMIN_ORDERS_SELECT_QUERY = "SELECT * FROM orders";
     private static final String ORDERS_UPDATE_QUERY = "UPDATE orders SET status = true WHERE id = ?";
     private static final String PHOTOGRAPH_UPDATE_QUERY = "UPDATE photographs SET photograph_name = ?, description = ? WHERE id = ?";
+    private static final String PHOTOGRAPH_DELETE_QUERY = "DELETE FROM photographs WHERE id = ?";
     private static final String PHOTOGRAPH_INSERT_QUERY = "INSERT INTO photographs (photograph_name, description) VALUES (?,?)";
     private static Connection connection;
 
@@ -166,6 +167,17 @@ public final class DatabaseController {
                 preparedStatement.setString(2,description);
                 preparedStatement.setInt(3, id);
                 preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void deletePhotograph(int id) {
+        if (DatabaseController.getUserStatus(User.getLogin())) {
+            try (Connection connection = getConnection();
+                 PreparedStatement preparedStatement = connection.prepareStatement(PHOTOGRAPH_DELETE_QUERY)) {
+                preparedStatement.setInt(1, id);
+                preparedStatement.execute();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
