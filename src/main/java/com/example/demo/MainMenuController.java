@@ -24,12 +24,15 @@ public final class MainMenuController implements Initializable {
     private BorderPane UIworkspace;
     @FXML
     private Button adminbutton;
-
+    @FXML
+    private Button adminbutton1;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
      adminbutton.setVisible(false);
+     adminbutton1.setVisible(false);
      if(User.getStatus()){
         adminbutton.setVisible(true);
+         adminbutton1.setVisible(true);
      }
         Username.setText("Welcome back, " + User.Login);
     }
@@ -61,9 +64,16 @@ public final class MainMenuController implements Initializable {
       }
     }
     @FXML
+    private void setPhotographControlSlide() throws IOException {
+        if(User.getStatus()) {
+            UIworkspace.setCenter(loadScene("PhotographControl"));
+        }
+    }
+    @FXML
     private void setOrderHistorySlide() throws IOException {
         UIworkspace.setCenter(loadScene("History"));
     }
+
     @FXML
     public static Parent loadScene(String scene) throws IOException {
         return FXMLLoader.load(Objects.requireNonNull(MainMenuController.class.getResource(scene + ".fxml")));

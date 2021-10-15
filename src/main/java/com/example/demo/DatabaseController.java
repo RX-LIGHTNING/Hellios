@@ -22,6 +22,7 @@ public final class DatabaseController {
     private static final String ORDERS_SELECT_QUERY = "SELECT * FROM orders WHERE user_id = ?";
     private static final String ADMIN_ORDERS_SELECT_QUERY = "SELECT * FROM orders";
     private static final String ORDERS_UPDATE_QUERY = "UPDATE orders SET status = true WHERE id = ?";
+    private static final String PHOTOGRAPH_UPDATE_QUERY = "UPDATE photographs SET photograph_name = ?, description = ? WHERE id = ?";
     private static final String PHOTOGRAPH_INSERT_QUERY = "INSERT INTO photographs (photograph_name, description) VALUES (?,?)";
     private static Connection connection;
 
@@ -88,7 +89,7 @@ public final class DatabaseController {
                 if(Objects.nonNull(resultSet)) {
                     while (resultSet.next()) {
                         result.add(new Photograph(resultSet.getString("photograph_name"),
-                                resultSet.getString("description")));
+                                resultSet.getString("description"),resultSet.getInt("id")));
                 }
             }
         } catch (SQLException e) {
@@ -152,6 +153,19 @@ public final class DatabaseController {
                  PreparedStatement preparedStatement = connection.prepareStatement(ORDERS_UPDATE_QUERY)) {
                 preparedStatement.setInt(1, id);
                 preparedStatement.execute();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void updatePhotograph(int id,String photograph, String description) {
+        if (DatabaseController.getUserStatus(User.getLogin())) {
+            try (Connection connection = getConnection();
+                 PreparedStatement preparedStatement = connection.prepareStatement(PHOTOGRAPH_UPDATE_QUERY)) {
+                preparedStatement.setString(1,photograph);
+                preparedStatement.setString(2,description);
+                preparedStatement.setInt(3, id);
+                preparedStatement.executeUpdate();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
