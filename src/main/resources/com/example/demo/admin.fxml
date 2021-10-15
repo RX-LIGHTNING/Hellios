@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="540.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.AdminPanelController">
+   <children>
+      <TableView fx:id="AdminTable" layoutX="14.0" layoutY="14.0" prefHeight="360.0" prefWidth="290.0" style="-fx-background-color: transparent;">
+        <columns>
+          <TableColumn fx:id="UserId" prefWidth="71.0" text="User" />
+          <TableColumn fx:id="Photograph" prefWidth="123.0" text="Photograph" />
+            <TableColumn fx:id="Status" prefWidth="95.0" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="29.0" layoutY="374.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="25.0" prefWidth="274.0" text="End Selected dick" />
+      <TextField fx:id="PhotographName" alignment="CENTER" layoutX="339.0" layoutY="208.0" prefHeight="25.0" prefWidth="191.0" promptText="photograph name" />
+      <TextField fx:id="PhotographDescription" alignment="TOP_CENTER" layoutX="339.0" layoutY="254.0" prefHeight="111.0" prefWidth="191.0" promptText="description" />
+      <Button layoutX="339.0" layoutY="374.0" mnemonicParsing="false" onAction="#addPhotograph" prefHeight="25.0" prefWidth="191.0" text="Add photograph" textAlignment="CENTER" wrapText="true" />
+   </children>
+</Pane>
