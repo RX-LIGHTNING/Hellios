@@ -4,11 +4,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import org.postgresql.core.Notification;
 
 import java.io.IOException;
 import java.net.URL;
@@ -16,6 +18,7 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public final class MainMenuController implements Initializable {
+
     @FXML
     private GridPane PhotoGrid;
     @FXML
@@ -26,15 +29,24 @@ public final class MainMenuController implements Initializable {
     private Button adminbutton;
     @FXML
     private Button adminbutton1;
+    @FXML
+    private Pane MainPane;
+    @FXML
+    private BorderPane NotificationBar;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
      adminbutton.setVisible(false);
      adminbutton1.setVisible(false);
-     if(User.getStatus()){
-        adminbutton.setVisible(true);
+     Username.setText("Welcome back, " + User.Login);
+        try {
+            UIworkspace.setCenter(loadScene("WelcomePage"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(User.getStatus()){
+         adminbutton.setVisible(true);
          adminbutton1.setVisible(true);
      }
-        Username.setText("Welcome back, " + User.Login);
     }
 
     @FXML
@@ -44,9 +56,17 @@ public final class MainMenuController implements Initializable {
 
     @FXML
     private void setPhotographsListSlide() throws IOException {
-        UIworkspace.setCenter(loadScene("Photo"));
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("Photo.fxml"));
+        Pane anchorPane = fxmlLoader.load();
+        PhotographsListController controller = fxmlLoader.getController();
+        controller.setData(MainMenuController.this);
+        UIworkspace.setCenter(anchorPane);
     }
-
+    @FXML
+    private void setWelcomePage() throws IOException {
+        UIworkspace.setCenter(loadScene("WelcomePage"));
+    }
     @FXML
     private void setSignOutSlide() throws IOException {
         ApplicationCoreController.showSignInMenu(ApplicationCoreController.st);
@@ -55,7 +75,12 @@ public final class MainMenuController implements Initializable {
 
     @FXML
     private void setOptionsSlide() throws IOException {
-        UIworkspace.setCenter(loadScene("Options"));
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("Options.fxml"));
+        Pane anchorPane = fxmlLoader.load();
+        OptionsController controller = fxmlLoader.getController();
+        controller.setData(MainMenuController.this);
+        UIworkspace.setCenter(anchorPane);
     }
     @FXML
     private void setAdminPanel() throws IOException {
@@ -73,9 +98,27 @@ public final class MainMenuController implements Initializable {
     private void setOrderHistorySlide() throws IOException {
         UIworkspace.setCenter(loadScene("History"));
     }
-
+    public void createNotification(String notify,int time) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("Notification.fxml"));
+        Pane anchorPane = fxmlLoader.load();
+        NotificationController controller = fxmlLoader.getController();
+        controller.setData(notify, time);
+        NotificationBar.setCenter(anchorPane);
+    }
+    public void setBackgroundImage(String URL){
+        MainPane.setStyle("-fx-background-image: url(\'" +URL+"\')");
+    }
+    public void setApplicationTheme(String URL){
+        MainPane.getStylesheets().add(URL);
+    }
     @FXML
     public static Parent loadScene(String scene) throws IOException {
+        try {
         return FXMLLoader.load(Objects.requireNonNull(MainMenuController.class.getResource(scene + ".fxml")));
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

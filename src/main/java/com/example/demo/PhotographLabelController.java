@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class PhotographLabelController {
@@ -11,13 +12,16 @@ public class PhotographLabelController {
     private Label Description;
     @FXML
     private Label photographname;
+    MainMenuController menuController;
     @FXML
     private Button commit;
-    public void setData(String name, String description){
+    public void setData(String name, String description, MainMenuController menuController){
         this.Description.setText(description);
         this.photographname.setText(name);
+        this.menuController = menuController;
     }
-    public void acceptOrder() throws SQLException {
+    public void acceptOrder() throws SQLException, IOException {
         DatabaseController.insertOrder(photographname.getText());
+        menuController.createNotification("Ваш заказ создан", 3000);
     }
 }

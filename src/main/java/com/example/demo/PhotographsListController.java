@@ -11,13 +11,13 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class PhotographsListController implements Initializable {
+public class PhotographsListController  {
 
     @FXML
     private GridPane PhotoGrid;
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    MainMenuController menuController;
+    public void setData(MainMenuController menuController){
+        this.menuController = menuController;
         List<Photograph> PhotographList = DatabaseController.getPhotographs();
         int countY = 0;
         int countX = 0;
@@ -27,7 +27,7 @@ public class PhotographsListController implements Initializable {
                 fxmlLoader.setLocation(getClass().getResource("PhotographLabel.fxml"));
                 Pane anchorPane = fxmlLoader.load();
                 PhotographLabelController controller = fxmlLoader.getController();
-                controller.setData(photograph.getPhotograph(), photograph.getDescription());
+                controller.setData(photograph.getPhotograph(), photograph.getDescription(),menuController);
                 PhotoGrid.add(anchorPane, countX, countY);
                 if (countY == 2) {
                     countY = 0;

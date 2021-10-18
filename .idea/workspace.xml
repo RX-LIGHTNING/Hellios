@@ -4,22 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added admin tool">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" afterDir="false" />
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added photographers list edit for admin accounts">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/NotificationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OptionsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Notification.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/WelcomePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/images/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/images/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/images/3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographEditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographControl.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographControl.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographLabelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographLabelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographsListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Options.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Options.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Styles/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Styles/DarkTheme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/AdminPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/AdminPanelController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DatabaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/DatabaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographControl.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographControl.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographEditController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographEditController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Options.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Options.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographLabelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographLabelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographsListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographsListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Styles/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Styles/DarkTheme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/admin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +44,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/demo/History.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Order.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zMAIdqtarReUpkOak9cGmUgw4c" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -65,6 +72,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.demo" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="ApplicationCoreController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -246,6 +258,31 @@
           <properties class="java.lang.NoSuchMethodException" package="java.lang" />
           <option name="timeStamp" value="22" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -256,6 +293,8 @@
     <watches-manager>
       <configuration name="Application">
         <watch expression="connection" />
+        <watch expression="mainMenuController.Username" />
+        <watch expression="mainMenuController.Username" />
       </configuration>
     </watches-manager>
   </component>
