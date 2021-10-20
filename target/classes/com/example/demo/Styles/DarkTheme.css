@@ -101,6 +101,11 @@
 
 .text-field {
     -fx-font-family: "Segoe UI Semibold";
+        -fx-font-size: 10pt;
+            -fx-padding: 5 0 5 0;
+}
+.text {
+-fx-text-fill: #FFFFFF;
 }
 .button {
     -fx-padding: 5 22 5 22;   

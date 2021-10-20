@@ -21,7 +21,14 @@ public class SignInController {
             if (DatabaseController.isLoggedIn(LoginText.getText(), PasswordText.getText())) {
                 ApplicationCoreController.showMainMenu(ApplicationCoreController.st);
             }
-        } else System.out.println("Некорректные параметры");
+            else {
+                LoginText.setStyle("-fx-border-color: red;");
+                PasswordText.setStyle("-fx-border-color: red;");
+            }
+        } else {
+            LoginText.setStyle("-fx-border-color: red;");
+            PasswordText.setStyle("-fx-border-color: red;");
+        };
     }
 
     @FXML

@@ -10,14 +10,17 @@ import java.util.Objects;
 
 public final class DatabaseController {
 
-    private static final String jdbcURL = "jdbc:postgresql://192.168.0.125:5432/Hellios";
+    private static final String jdbcURL = "jdbc:postgresql://localhost:5432/Hellios";
     private static final String username = "postgres";
     private static final String password = "root";
 
-    private static final String USER_INSERT_QUERY = "INSERT INTO Users (login, password) VALUES (?,?)";
+    private static final String USER_INSERT_QUERY = "INSERT INTO Users (login, password, contacts) VALUES (?,?,?)";
     private static final String ORDERS_INSERT_QUERY ="INSERT INTO orders (user_id, photograph_name) VALUES (?,?)";
     private static final String USER_SELECT_QUERY = "SELECT * FROM users WHERE login = ? AND password = ?";
+    private static final String IS_USER_EXIST_QUERY = "SELECT * FROM users WHERE login = ?";
     private static final String USER_STATUS_SELECT_QUERY = "SELECT * FROM users WHERE login = ?";
+    private static final String USER_SELECT_INFO_QUERY = "SELECT * FROM users WHERE id = ?";
+    private static final String USER_UPDATE_QUERY = "UPDATE users SET contacts = ? WHERE login = ?";
     private static final String PHOTOGRAPH_SELECT_QUERY = "SELECT * FROM photographs";
     private static final String ORDERS_SELECT_QUERY = "SELECT * FROM orders WHERE user_id = ?";
     private static final String ADMIN_ORDERS_SELECT_QUERY = "SELECT * FROM orders";
@@ -37,12 +40,22 @@ public final class DatabaseController {
         }
         return connection;
     }
-
-    public static void userInsert(String login, String password) {
+    public static void userContactUpdate(String Contact){
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(USER_UPDATE_QUERY)) {
+            preparedStatement.setString(1,Contact);
+            preparedStatement.setString(2,User.getLogin());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    public static void userInsert(String login, String password,String contacts) {
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(USER_INSERT_QUERY)) {
             preparedStatement.setString(1,login);
             preparedStatement.setString(2,password);
+            preparedStatement.setString(3,contacts);
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -72,6 +85,7 @@ public final class DatabaseController {
             if (resultSet.next()) {
                 User.setLogin(resultSet.getString("login"));
                 User.setId(resultSet.getInt("id"));
+                User.setContact(resultSet.getString("contacts"));
                 preparedStatement.close();
                 result = true;
             }
@@ -82,6 +96,40 @@ public final class DatabaseController {
         return result;
     }
 
+    public static SelectedUser getUserInfo(int id) throws SQLException {
+        SelectedUser result = new SelectedUser("213","123");
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(USER_SELECT_INFO_QUERY)) {
+            preparedStatement.setInt(1,id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                result = new SelectedUser(resultSet.getString("login"),resultSet.getString("contacts"));
+                preparedStatement.close();
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    public static boolean isUserExist(String login) throws SQLException {
+        boolean result = false;
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(IS_USER_EXIST_QUERY)) {
+            preparedStatement.setString(1,login);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                preparedStatement.close();
+                result = true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
     public static List<Photograph> getPhotographs() {
         List<Photograph> result=new ArrayList<>();
         try (Connection connection = getConnection();

@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -33,10 +34,13 @@ public final class MainMenuController implements Initializable {
     private Pane MainPane;
     @FXML
     private BorderPane NotificationBar;
+    @FXML
+    private Button adminbutton11;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
      adminbutton.setVisible(false);
      adminbutton1.setVisible(false);
+     adminbutton11.setVisible(false);
      Username.setText("Welcome back, " + User.Login);
         try {
             UIworkspace.setCenter(loadScene("WelcomePage"));
@@ -46,6 +50,7 @@ public final class MainMenuController implements Initializable {
         if(User.getStatus()){
          adminbutton.setVisible(true);
          adminbutton1.setVisible(true);
+         adminbutton11.setVisible(true);
      }
     }
 
@@ -105,6 +110,11 @@ public final class MainMenuController implements Initializable {
         NotificationController controller = fxmlLoader.getController();
         controller.setData(notify, time);
         NotificationBar.setCenter(anchorPane);
+    }
+    public void setUserInfo() throws IOException {
+        if(User.getStatus()) {
+            UIworkspace.setCenter(loadScene("UserInfo"));
+        }
     }
     public void setBackgroundImage(String URL){
         MainPane.setStyle("-fx-background-image: url(\'" +URL+"\')");

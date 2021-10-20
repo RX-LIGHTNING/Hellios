@@ -30,10 +30,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>17-ea+11</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-
-
-
     </dependencies>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
