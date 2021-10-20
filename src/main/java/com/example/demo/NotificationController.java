@@ -1,7 +1,12 @@
 package com.example.demo;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.util.Duration;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -11,17 +16,17 @@ public class NotificationController {
     private Label NotificationText;
     @FXML
     private Label NotificationPane;
-    public void setData(String notify, int time) {
+    public void setData(String notify, int time, MainMenuController menuController) {
         NotificationText.setText(notify);
-        Timer timer1 = new Timer();
-
-        TimerTask Task1 = new TimerTask() {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                NotificationText=null;
+                Platform.runLater(() -> {
+                    menuController.NotificationBar.setCenter(null);
+                });
             }
-        };
-        timer1.schedule(Task1,100);
+        }, time);
     }
 
 }

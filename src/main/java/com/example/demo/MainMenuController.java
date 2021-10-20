@@ -33,7 +33,7 @@ public final class MainMenuController implements Initializable {
     @FXML
     private Pane MainPane;
     @FXML
-    private BorderPane NotificationBar;
+    public BorderPane NotificationBar;
     @FXML
     private Button adminbutton11;
     @Override
@@ -108,7 +108,7 @@ public final class MainMenuController implements Initializable {
         fxmlLoader.setLocation(getClass().getResource("Notification.fxml"));
         Pane anchorPane = fxmlLoader.load();
         NotificationController controller = fxmlLoader.getController();
-        controller.setData(notify, time);
+        controller.setData(notify, time, MainMenuController.this);
         NotificationBar.setCenter(anchorPane);
     }
     public void setUserInfo() throws IOException {

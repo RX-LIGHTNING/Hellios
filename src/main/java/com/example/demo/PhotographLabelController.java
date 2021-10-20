@@ -22,6 +22,6 @@ public class PhotographLabelController {
     }
     public void acceptOrder() throws SQLException, IOException {
         DatabaseController.insertOrder(photographname.getText());
-        menuController.createNotification("Ваш заказ создан", 3000);
+        menuController.createNotification("Ваш заказ создан", 1500);
     }
 }
