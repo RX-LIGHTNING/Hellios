@@ -22,6 +22,12 @@ public class AdminPanelController implements Initializable {
     @FXML
     private TableColumn UserId;
     @FXML
+    private TableColumn userName;
+    @FXML
+    private TableColumn userContact;
+    @FXML
+    private TableColumn orderDate;
+    @FXML
     private TextField PhotographName;
     @FXML
     private TextField FilterField;
@@ -37,6 +43,10 @@ public class AdminPanelController implements Initializable {
         Photograph.setCellValueFactory(new PropertyValueFactory<>("Photograph"));
         Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
         UserId.setCellValueFactory(new PropertyValueFactory<>("UserId"));
+        userName.setCellValueFactory(new PropertyValueFactory<>("username"));
+        userContact.setCellValueFactory(new PropertyValueFactory<>("usercontact"));
+        orderDate.setCellValueFactory(new PropertyValueFactory<>("orderdate"));
+
         for (int i = 0; i < OrderList.size(); i++) {
             if (filter!=""&& OrderList.get(i).getPhotograph().equals(filter)) {
                 AdminTable.getItems().add(OrderList.get(i));
@@ -53,10 +63,5 @@ public class AdminPanelController implements Initializable {
         Order temp = AdminTable.getSelectionModel().getSelectedItem();
         DatabaseController.updateOrder(temp.getId());
         updateTable(FilterField.getText());
-    }
-    public void addPhotograph(){
-        if(!PhotographName.getText().isEmpty()&&!PhotographDescription.getText().isEmpty()) {
-            DatabaseController.insertPhotograph(PhotographName.getText(), PhotographDescription.getText());
-        }
     }
 }

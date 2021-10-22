@@ -65,7 +65,7 @@
        -fx-background-color: transparent;
 }
 .table-view .column-header .label {
-    -fx-font-size: 15pt;
+    -fx-font-size: 10pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
     -fx-alignment: center;
@@ -107,7 +107,6 @@
 .text-field {
     -fx-font-family: "Segoe UI Semibold";
         -fx-font-size: 10pt;
-            -fx-padding: 5 0 5 0;
 }
 .text {
 -fx-text-fill: #FFFFFF;
@@ -121,9 +120,7 @@
     -fx-text-fill: #d8d8d8;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
-#orderbutton{
-    -fx-background-color:white;
-}
+
 .button:hover {
     -fx-background-color: #2f2f2f;
     -fx-text-fill: white;

@@ -4,37 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added options and notification bar prototype">
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Fixed bug with photographs grid.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderConfirmController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/OrderConfirm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/NotificationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/OptionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OptionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographLabelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographLabelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographsListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/PhotographsListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/History.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/History.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Notification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Notification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Photo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Photo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographLabel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographLabel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Styles/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Styles/DarkTheme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/ApplicationCoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/ApplicationCoreController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/DatabaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/DatabaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/History.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/History.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/MainMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Notification.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Notification.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/NotificationController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/NotificationController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/NotificationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/NotificationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/OptionsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/OptionsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/OrderHistoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/OrderHistoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Photo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Photo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographLabel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographLabel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographLabelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographLabelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographsListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/PhotographsListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/Styles/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/Styles/DarkTheme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/admin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -85,12 +75,12 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="openjdk-17" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/resources/com/example/demo" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/example/demo" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -257,7 +247,28 @@
       <option name="project" value="LOCAL" />
       <updated>1634551247644</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixed bug with photographs grid.">
+      <created>1634890585633</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1634890585633</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fixed bug with photographs grid.">
+      <created>1634890603324</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1634890603324</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fixed bug with photographs grid.">
+      <created>1634890649116</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1634890649116</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -295,7 +306,8 @@
     <MESSAGE value="Added admin tool" />
     <MESSAGE value="Added photographers list edit for admin accounts" />
     <MESSAGE value="Added options and notification bar prototype" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added options and notification bar prototype" />
+    <MESSAGE value="Fixed bug with photographs grid." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with photographs grid." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -304,6 +316,11 @@
           <properties class="java.lang.NoSuchMethodException" package="java.lang" />
           <option name="timeStamp" value="22" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

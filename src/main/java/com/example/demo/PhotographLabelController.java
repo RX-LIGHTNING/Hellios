@@ -1,8 +1,11 @@
 package com.example.demo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -21,7 +24,13 @@ public class PhotographLabelController {
         this.menuController = menuController;
     }
     public void acceptOrder() throws SQLException, IOException {
-        DatabaseController.insertOrder(photographname.getText());
-        menuController.createNotification("Your order has been created", 3000);
+//        DatabaseController.insertOrder(photographname.getText());
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("OrderConfirm.fxml"));
+        Pane anchorPane = fxmlLoader.load();
+        OrderConfirmController controller = fxmlLoader.getController();
+        controller.setData(menuController, photographname.getText());
+        menuController.UIworkspace.setCenter(anchorPane);
+
     }
 }

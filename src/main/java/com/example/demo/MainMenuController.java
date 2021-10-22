@@ -26,7 +26,7 @@ public final class MainMenuController implements Initializable {
     @FXML
     private Label Username;
     @FXML
-    private BorderPane UIworkspace;
+    public BorderPane UIworkspace;
     @FXML
     private Button adminbutton;
     @FXML
@@ -61,7 +61,7 @@ public final class MainMenuController implements Initializable {
     }
 
     @FXML
-    private void setPhotographsListSlide() throws IOException {
+    public void setPhotographsListSlide() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("Photo.fxml"));
         ScrollPane anchorPane = fxmlLoader.load();
@@ -70,7 +70,7 @@ public final class MainMenuController implements Initializable {
         UIworkspace.setCenter(anchorPane);
     }
     @FXML
-    private void setWelcomePage() throws IOException {
+    public void setWelcomePage() throws IOException {
         UIworkspace.setCenter(loadScene("WelcomePage"));
     }
     @FXML

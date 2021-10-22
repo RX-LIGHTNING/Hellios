@@ -1,23 +1,28 @@
 package com.example.demo;
 
-public class Order {
+import java.sql.Date;
 
+public class Order {
     public String Photograph;
     public String Status;
     public int Id;
     public int UserId;
-    public int getUserId() {
-        return UserId;
+    public String username;
+    public String usercontact;
+    public Date orderdate;
+
+
+
+    public String getPhotograph() {
+        return Photograph;
     }
-
-    public void setUserId(int userId) {
-        UserId = userId;
-    }
-
-
 
     public void setPhotograph(String photograph) {
         Photograph = photograph;
+    }
+
+    public String getStatus() {
+        return Status;
     }
 
     public void setStatus(String status) {
@@ -28,26 +33,49 @@ public class Order {
         Id = id;
     }
 
-    public String getPhotograph() {
-        return Photograph;
+    public int getUserId() {
+        return UserId;
     }
 
-    public String getStatus() {
-        return Status;
+    public void setUserId(int userId) {
+        UserId = userId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsercontact() {
+        return usercontact;
+    }
+
+    public void setUsercontact(String usercontact) {
+        this.usercontact = usercontact;
+    }
+
+    public Date getOrderdate() {
+        return orderdate;
+    }
+
+    public void setOrderdate(Date orderdate) {
+        this.orderdate = orderdate;
     }
 
     public int getId() {
         return Id;
     }
 
-    public Order(String photograph, boolean status) {
-        this.Photograph = photograph;
+    public Order(int id,int userId, String photograph_name, boolean status, String user_name, String user_contact, Date order_date) {
+        this.Photograph = photograph_name;
         this.Status = status ? "Done." : "In progress.";
-    }
-    public Order(String photograph, boolean status,int UserId,int Id) {
-        this.Photograph = photograph;
-        this.Status = status ? "Done." : "In progress.";
-        this.UserId = UserId;
-        this.Id = Id;
+        this.UserId = userId;
+        this.username=user_name;
+        this.usercontact = user_contact;
+        this.orderdate = order_date;
+        this.Id = id;
     }
 }

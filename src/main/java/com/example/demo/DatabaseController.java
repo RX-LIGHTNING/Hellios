@@ -15,7 +15,7 @@ public final class DatabaseController {
     private static final String password = "root";
 
     private static final String USER_INSERT_QUERY = "INSERT INTO Users (login, password, contacts) VALUES (?,?,?)";
-    private static final String ORDERS_INSERT_QUERY ="INSERT INTO orders (user_id, photograph_name) VALUES (?,?)";
+    private static final String ORDERS_INSERT_QUERY ="INSERT INTO orders (user_id, photograph_name,user_name,user_contact,order_date) VALUES (?,?,?,?,?)";
     private static final String USER_SELECT_QUERY = "SELECT * FROM users WHERE login = ? AND password = ?";
     private static final String IS_USER_EXIST_QUERY = "SELECT * FROM users WHERE login = ?";
     private static final String USER_STATUS_SELECT_QUERY = "SELECT * FROM users WHERE login = ?";
@@ -156,7 +156,14 @@ public final class DatabaseController {
             try (ResultSet resultSet = preparedStatement.executeQuery()){
                 if(Objects.nonNull(resultSet)) {
                     while (resultSet.next()) {
-                            result.add(new Order(resultSet.getString("photograph_name"), resultSet.getBoolean("status")));
+                            result.add(new Order(
+                                    resultSet.getInt("id"),
+                                    resultSet.getInt("user_id"),
+                                    resultSet.getString("photograph_name"),
+                                    resultSet.getBoolean("status"),
+                                    resultSet.getString("user_name"),
+                                    resultSet.getString("user_contact"),
+                                    resultSet.getDate("order_date")));
                     }
                 }
             }
@@ -174,7 +181,14 @@ public final class DatabaseController {
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     if (Objects.nonNull(resultSet)) {
                         while (resultSet.next()) {
-                            result.add(new Order(resultSet.getString("photograph_name"), resultSet.getBoolean("status"),resultSet.getInt("user_id"),resultSet.getInt("id")));
+                            result.add(new Order(
+                                    resultSet.getInt("id"),
+                                    resultSet.getInt("user_id"),
+                                    resultSet.getString("photograph_name"),
+                                    resultSet.getBoolean("status"),
+                                    resultSet.getString("user_name"),
+                                    resultSet.getString("user_contact"),
+                                    resultSet.getDate("order_date")));
                         }
                     }
                 }
@@ -185,12 +199,15 @@ public final class DatabaseController {
         }
         return result;
     }
-    public static void insertOrder(String photographname) {
+    public static void insertOrder(String photographname,String username, String usercontact,Date date) {
 
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(ORDERS_INSERT_QUERY)) {
             preparedStatement.setInt(1,User.getId());
             preparedStatement.setString(2,photographname);
+            preparedStatement.setString(3,username);
+            preparedStatement.setString(4,usercontact);
+            preparedStatement.setDate(5,date);
             preparedStatement.execute();
         } catch (SQLException e) {
             e.printStackTrace();
