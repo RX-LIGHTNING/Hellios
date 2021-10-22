@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -63,7 +64,7 @@ public final class MainMenuController implements Initializable {
     private void setPhotographsListSlide() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("Photo.fxml"));
-        Pane anchorPane = fxmlLoader.load();
+        ScrollPane anchorPane = fxmlLoader.load();
         PhotographsListController controller = fxmlLoader.getController();
         controller.setData(MainMenuController.this);
         UIworkspace.setCenter(anchorPane);
@@ -101,7 +102,12 @@ public final class MainMenuController implements Initializable {
     }
     @FXML
     private void setOrderHistorySlide() throws IOException {
-        UIworkspace.setCenter(loadScene("History"));
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(getClass().getResource("History.fxml"));
+        Pane anchorPane = fxmlLoader.load();
+        OrderHistoryController controller = fxmlLoader.getController();
+        controller.setData(MainMenuController.this);
+        UIworkspace.setCenter(anchorPane);
     }
     public void createNotification(String notify,int time) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();

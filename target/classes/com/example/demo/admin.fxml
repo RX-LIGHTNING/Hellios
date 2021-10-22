@@ -15,8 +15,8 @@
             <TableColumn fx:id="Status" prefWidth="151.0" text="Status" />
         </columns>
       </TableView>
-      <Button id="filter" layoutX="340.0" layoutY="366.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="31.0" prefWidth="149.0" stylesheets="@Styles/DarkTheme.css" text="End selected process" />
-      <TextField fx:id="FilterField" layoutX="60.0" layoutY="366.0" onAction="#filterTable" prefHeight="31.0" prefWidth="156.0" promptText="Filter" />
-      <Button id="filter" layoutX="216.0" layoutY="366.0" mnemonicParsing="false" onAction="#filterTable" prefHeight="25.0" prefWidth="92.0" stylesheets="@Styles/DarkTheme.css" text="filter" />
+      <Button id="filter" layoutX="370.0" layoutY="31.0" mnemonicParsing="false" onAction="#finishOrder" prefHeight="31.0" prefWidth="122.0" stylesheets="@Styles/DarkTheme.css" text="End selected" />
+      <TextField fx:id="FilterField" layoutX="52.0" layoutY="31.0" onAction="#filterTable" prefHeight="31.0" prefWidth="132.0" promptText="Filter" />
+      <Button id="filter" layoutX="184.0" layoutY="32.0" mnemonicParsing="false" onAction="#filterTable" prefHeight="25.0" prefWidth="92.0" stylesheets="@Styles/DarkTheme.css" text="filter" />
    </children>
 </Pane>

@@ -7,6 +7,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -19,11 +20,17 @@ public class OptionsController {
     @FXML
     private TextField ContactTextField;
     MainMenuController ParentController;
-    public void ChangeBackgroundImage(){
-        ParentController.setBackgroundImage(PictureURL.getText());
+    public void ChangeBackgroundImage() throws IOException {
+        if(!PictureURL.getText().isEmpty()) {
+            ParentController.setBackgroundImage(PictureURL.getText());
+            ParentController.createNotification("Background changed",3000);
+        }
     }
-    public void ChangeTheme(){
-        ParentController.setApplicationTheme(ThemeURL.getText());
+    public void ChangeTheme() throws IOException {
+        if(!ThemeURL.getText().isEmpty()) {
+            ParentController.setApplicationTheme(ThemeURL.getText());
+            ParentController.createNotification("Theme changed",3000);
+        }
     }
 
     public void setData(MainMenuController mainMenuController) {

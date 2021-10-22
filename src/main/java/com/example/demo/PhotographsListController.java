@@ -3,8 +3,10 @@ package com.example.demo;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,22 +21,32 @@ public class PhotographsListController  {
     public void setData(MainMenuController menuController){
         this.menuController = menuController;
         List<Photograph> PhotographList = DatabaseController.getPhotographs();
-        int countY = 0;
-        int countX = 0;
+        int column = 0;
+        int row = 1;
         try {
-            for (Photograph photograph : PhotographList) {
+            for (int i = 0; i<PhotographList.size(); i++) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("PhotographLabel.fxml"));
                 Pane anchorPane = fxmlLoader.load();
+
                 PhotographLabelController controller = fxmlLoader.getController();
-                controller.setData(photograph.getPhotograph(), photograph.getDescription(),menuController);
-                PhotoGrid.add(anchorPane, countX, countY);
-                if (countY == 2) {
-                    countY = 0;
-                    countX++;
-                } else {
-                    countY++;
+                controller.setData(PhotographList.get(i).getPhotograph(), PhotographList.get(i).getDescription(),menuController);
+                if(column==2){
+                    column=0;
+                    row++;
                 }
+                PhotoGrid.setMinWidth(Region.USE_COMPUTED_SIZE);
+                PhotoGrid.setPrefWidth(Region.USE_COMPUTED_SIZE);
+                PhotoGrid.setMaxWidth(Region.USE_COMPUTED_SIZE);
+                //
+                PhotoGrid.setMinHeight(Region.USE_COMPUTED_SIZE);
+                PhotoGrid.setPrefHeight(Region.USE_COMPUTED_SIZE);
+                PhotoGrid.setMaxHeight(Region.USE_COMPUTED_SIZE);
+                //
+                PhotoGrid.add(anchorPane, column++, row);
+
+
+                GridPane.setMargin(anchorPane, new Insets(5));
             }
         } catch (IOException e) {
             e.printStackTrace();
