@@ -7,16 +7,18 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.OptionsController">
    <children>
-      <Button layoutX="300.0" layoutY="45.0" mnemonicParsing="false" onAction="#ChangeBackgroundImage" text="Set background image" />
-      <TextField fx:id="PictureURL" layoutX="142.0" layoutY="45.0" prefHeight="25.0" prefWidth="158.0" promptText="picture url" />
-      <Text fill="WHITE" layoutX="242.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visual options" />
-      <Text fill="WHITE" layoutX="31.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="background image" />
-      <Text fill="WHITE" layoutX="60.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Themes" />
-      <TextField fx:id="ThemeURL" layoutX="142.0" layoutY="81.0" prefHeight="25.0" prefWidth="158.0" promptText="Theme url" />
-      <Button layoutX="300.0" layoutY="81.0" mnemonicParsing="false" onAction="#ChangeTheme" prefHeight="25.0" prefWidth="136.0" text="Set theme" />
+      <Button layoutX="436.0" layoutY="45.0" mnemonicParsing="false" onAction="#ChangeBackgroundImage" text="Set background image" />
+      <TextField fx:id="PictureURL" layoutX="131.0" layoutY="45.0" prefHeight="25.0" prefWidth="158.0" promptText="picture url" />
+      <Text fill="WHITE" layoutX="143.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visual options" textAlignment="CENTER" wrappingWidth="359.513671875" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="background image" />
+      <Text fill="WHITE" layoutX="43.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Themes" />
+      <TextField fx:id="ThemeURL" layoutX="131.0" layoutY="81.0" prefHeight="25.0" prefWidth="158.0" promptText="Theme url" />
+      <Button layoutX="436.0" layoutY="81.0" mnemonicParsing="false" onAction="#ChangeTheme" prefHeight="25.0" prefWidth="136.0" text="Set theme" />
       <Text fill="WHITE" layoutX="234.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Information" />
       <Text fx:id="currentContact" fill="WHITE" layoutX="81.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current contact information:" />
       <TextField fx:id="ContactTextField" layoutX="77.0" layoutY="188.0" prefHeight="25.0" prefWidth="158.0" promptText="Enter new contact infirmation" />
       <Button fx:id="ContactConfirm" layoutX="234.0" layoutY="188.0" mnemonicParsing="false" onAction="#changeContacts" text="Change Contact " />
+      <Button layoutX="308.0" layoutY="45.0" mnemonicParsing="false" onAction="#backgroundFileSelecter" prefHeight="25.0" prefWidth="104.0" text="Choose file" />
+      <Button layoutX="308.0" layoutY="81.0" mnemonicParsing="false" onAction="#themesFileSelector" prefHeight="25.0" prefWidth="104.0" text="Choose file" />
    </children>
 </Pane>

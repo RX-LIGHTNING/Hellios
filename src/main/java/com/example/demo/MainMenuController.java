@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -37,6 +39,8 @@ public final class MainMenuController implements Initializable {
     public BorderPane NotificationBar;
     @FXML
     private Button adminbutton11;
+    @FXML
+    private ImageView BackgroundImage;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
      adminbutton.setVisible(false);
@@ -122,11 +126,9 @@ public final class MainMenuController implements Initializable {
             UIworkspace.setCenter(loadScene("UserInfo"));
         }
     }
-    public void setBackgroundImage(String URL){
-        MainPane.setStyle("-fx-background-image: url(\'" +URL+"\')");
-    }
+    public void setBackgroundImage(String URL){ BackgroundImage.setImage(new Image("file:///"+URL)); }
     public void setApplicationTheme(String URL){
-        MainPane.getStylesheets().add(URL);
+        MainPane.getStylesheets().add("file:///"+URL);
     }
     @FXML
     public static Parent loadScene(String scene) throws IOException {
