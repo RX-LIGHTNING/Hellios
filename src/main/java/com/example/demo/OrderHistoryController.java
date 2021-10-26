@@ -7,7 +7,22 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.openxml4j.opc.OPCPackage;
+import org.apache.poi.ss.usermodel.CreationHelper;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -68,6 +83,62 @@ public class OrderHistoryController implements Initializable {
     public void filterTable() throws IOException {
         updateTable(FilterField.getText(), FilterCheck.isSelected());
         ParentController.createNotification("Table is Filtered",3000);
+    }
+    public void printHistory() throws IOException {
+
+        String filePath = "1.xlsx";
+        List<Order> OrderList = DatabaseController.getOrders();
+        Workbook excelWookBook = new XSSFWorkbook();
+        Sheet employeeSheet = excelWookBook.createSheet("Orders");
+        Row headerRow = employeeSheet.createRow(0);
+
+        headerRow.createCell(0).setCellValue("Photograph");
+        headerRow.createCell(1).setCellValue("Contacts");
+        headerRow.createCell(2).setCellValue("OrderDate");
+        headerRow.createCell(3).setCellValue("Status");
+        if(OrderList!=null)
+        {
+            int size = OrderList.size();
+            for(int i=0;i<size;i++)
+            {
+                Order eDto = OrderList.get(i);
+                Row row = employeeSheet.createRow(i+1);
+
+                row.createCell(0).setCellValue(eDto.getPhotograph());
+                row.createCell(1).setCellValue(eDto.getUsercontact());
+                row.createCell(2).setCellValue(eDto.getOrderdate());
+                row.createCell(3).setCellValue(eDto.getStatus());
+
+            }
+        }
+        FileOutputStream fOut = new FileOutputStream(filePath);
+        excelWookBook.write(fOut);
+        fOut.close();
+    }
+    public void printAgreement() throws IOException, InvalidFormatException {
+        Order temp = Table.getSelectionModel().getSelectedItem();
+        if(Objects.nonNull(temp)) {
+            XWPFDocument document = new XWPFDocument(OPCPackage.open("input.docx"));
+            for (XWPFParagraph paragraph : document.getParagraphs()) {
+                for (XWPFRun run : paragraph.getRuns()) {
+                    String text = run.getText(0);
+                    text = text.replace("name", temp.getUsername());
+                    text = text.replace("photo", temp.getPhotograph());
+                    text = text.replace("date", temp.getOrderdate().toString());
+                    run.setText(text,0);
+                    System.out.println(text);
+                }
+            }
+            document.write(new FileOutputStream("output.docx"));
+            try {
+                if (Desktop.isDesktopSupported()) {
+                    Desktop.getDesktop().open(new File("output.docx"));
+                }
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
+        }
+
     }
 }
 

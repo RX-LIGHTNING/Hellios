@@ -3,14 +3,13 @@ package com.example.demo;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 
 
 public final class DatabaseController {
 
-    private static final String jdbcURL = "jdbc:postgresql://192.168.100.4:5432/Hellios";
+    private static final String jdbcURL = "jdbc:postgresql://localhost:5432/Hellios";
     private static final String username = "postgres";
     private static final String password = "root";
 

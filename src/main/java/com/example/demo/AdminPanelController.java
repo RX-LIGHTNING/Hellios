@@ -7,7 +7,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -63,5 +69,38 @@ public class AdminPanelController implements Initializable {
         Order temp = AdminTable.getSelectionModel().getSelectedItem();
         DatabaseController.updateOrder(temp.getId());
         updateTable(FilterField.getText());
+    }
+    public void printHistory() throws IOException {
+        if (User.getStatus()) {
+            String filePath = "C:\\Games\\SnusPablo.xlsx";
+            List<Order> OrderList = DatabaseController.getOrders();
+            Workbook excelWookBook = new XSSFWorkbook();
+            Sheet employeeSheet = excelWookBook.createSheet("Orders");
+            Row headerRow = employeeSheet.createRow(0);
+
+            headerRow.createCell(0).setCellValue("Photograph");
+            headerRow.createCell(1).setCellValue("Contacts");
+            headerRow.createCell(2).setCellValue("OrderDate");
+            headerRow.createCell(3).setCellValue("Status");
+            headerRow.createCell(4).setCellValue("Username");
+            headerRow.createCell(5).setCellValue("Id");
+            if (OrderList != null) {
+                int size = OrderList.size();
+                for (int i = 0; i < size; i++) {
+                    Order eDto = OrderList.get(i);
+                    Row row = employeeSheet.createRow(i + 1);
+
+                    row.createCell(0).setCellValue(eDto.getPhotograph());
+                    row.createCell(1).setCellValue(eDto.getUsercontact());
+                    row.createCell(2).setCellValue(eDto.getOrderdate().toString());
+                    row.createCell(3).setCellValue(eDto.getUserId());
+                    row.createCell(4).setCellValue(eDto.getUsername());
+                    row.createCell(5).setCellValue(eDto.getId());
+                }
+            }
+            FileOutputStream fOut = new FileOutputStream(filePath);
+            excelWookBook.write(fOut);
+            fOut.close();
+        }
     }
 }

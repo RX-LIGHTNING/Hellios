@@ -27,5 +27,7 @@
       <TextField fx:id="FilterField" alignment="CENTER" layoutX="19.0" layoutY="27.0" prefHeight="25.0" prefWidth="214.0" promptText="Photograph name" />
       <Button layoutX="424.0" layoutY="27.0" mnemonicParsing="false" onAction="#filterTable" text="Apply Filter" textAlignment="CENTER" />
       <CheckBox fx:id="FilterCheck" layoutX="255.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Only in progress" />
+      <Button layoutX="308.0" layoutY="391.0" mnemonicParsing="false" onAction="#printHistory" prefHeight="25.0" prefWidth="214.0" text="Get excel file" />
+      <Button layoutX="19.0" layoutY="391.0" mnemonicParsing="false" onAction="#printAgreement" prefHeight="25.0" prefWidth="198.0" text="Get Agreement pattern" />
    </children>
 </Pane>

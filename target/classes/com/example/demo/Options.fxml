@@ -18,7 +18,7 @@
       <Text fx:id="currentContact" fill="WHITE" layoutX="81.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current contact information:" />
       <TextField fx:id="ContactTextField" layoutX="77.0" layoutY="188.0" prefHeight="25.0" prefWidth="158.0" promptText="Enter new contact infirmation" />
       <Button fx:id="ContactConfirm" layoutX="234.0" layoutY="188.0" mnemonicParsing="false" onAction="#changeContacts" text="Change Contact " />
-      <Button layoutX="323.0" layoutY="45.0" mnemonicParsing="false" onAction="#backgroundFileSelecter" prefHeight="25.0" prefWidth="89.0" text="Choose file" />
-      <Button layoutX="323.0" layoutY="81.0" mnemonicParsing="false" onAction="#themesFileSelector" prefHeight="25.0" prefWidth="89.0" text="Choose file" />
+      <Button layoutX="308.0" layoutY="45.0" mnemonicParsing="false" onAction="#backgroundFileSelecter" prefHeight="25.0" prefWidth="104.0" text="Choose file" />
+      <Button layoutX="308.0" layoutY="81.0" mnemonicParsing="false" onAction="#themesFileSelector" prefHeight="25.0" prefWidth="104.0" text="Choose file" />
    </children>
 </Pane>
