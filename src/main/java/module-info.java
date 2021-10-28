@@ -1,6 +1,6 @@
 module com.example.demo {
-    requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.controls;
     requires java.sql;
     requires org.postgresql.jdbc;
     requires org.apache.poi.poi;

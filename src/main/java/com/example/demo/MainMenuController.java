@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -100,9 +101,9 @@ public final class MainMenuController implements Initializable {
     }
     @FXML
     private void setAdminPanel() throws IOException {
-      if(User.getStatus()) {
-            UIworkspace.setCenter(loadScene("Admin"));
-      }
+        if(User.getStatus()) {
+            UIworkspace.setCenter(loadScene("admin"));
+        }
     }
     @FXML
     private void setPhotographControlSlide() throws IOException {
@@ -139,6 +140,7 @@ public final class MainMenuController implements Initializable {
     @FXML
     public static Parent loadScene(String scene) throws IOException {
         try {
+
         return FXMLLoader.load(Objects.requireNonNull(MainMenuController.class.getResource(scene + ".fxml")));
         } catch (IOException e) {
             e.printStackTrace();
