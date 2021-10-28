@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane fx:id="MainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #111111;" stylesheets="@Styles/DarkTheme.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainMenuController">
+<Pane fx:id="MainPane" style="-fx-background-color: #111111;" stylesheets="@Styles/DarkTheme.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainMenuController">
    <children>
       <ImageView fx:id="BackgroundImage" fitHeight="500.0" fitWidth="750.0" pickOnBounds="true" />
       <BorderPane fx:id="UIworkspace" layoutX="212.0" layoutY="51.0" prefHeight="434.0" prefWidth="538.0" />

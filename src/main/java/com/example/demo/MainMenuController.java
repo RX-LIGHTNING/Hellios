@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -11,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -22,7 +24,8 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public final class MainMenuController implements Initializable {
-
+    private double xOffset = 0;
+    private double yOffset = 0;
     @FXML
     private GridPane PhotoGrid;
     @FXML
@@ -46,6 +49,7 @@ public final class MainMenuController implements Initializable {
      adminbutton.setVisible(false);
      adminbutton1.setVisible(false);
      adminbutton11.setVisible(false);
+
      Username.setText("Welcome back, " + User.Login);
         try {
             UIworkspace.setCenter(loadScene("WelcomePage"));
@@ -58,6 +62,8 @@ public final class MainMenuController implements Initializable {
          adminbutton11.setVisible(true);
      }
     }
+
+
 
     @FXML
     protected void exitApplication() {
@@ -139,4 +145,5 @@ public final class MainMenuController implements Initializable {
             return null;
         }
     }
+
 }

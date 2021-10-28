@@ -2,7 +2,6 @@ package com.example.demo;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.chart.PieChart;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -44,23 +43,24 @@ public class AdminPanelController implements Initializable {
         updateTable("");
     }
     public void updateTable(String filter){
-        AdminTable.getItems().clear();
-        List<Order> OrderList = DatabaseController.getAdminOrders();
-        Photograph.setCellValueFactory(new PropertyValueFactory<>("Photograph"));
-        Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
-        UserId.setCellValueFactory(new PropertyValueFactory<>("UserId"));
-        userName.setCellValueFactory(new PropertyValueFactory<>("username"));
-        userContact.setCellValueFactory(new PropertyValueFactory<>("usercontact"));
-        orderDate.setCellValueFactory(new PropertyValueFactory<>("orderdate"));
 
-        for (int i = 0; i < OrderList.size(); i++) {
-            if (filter!=""&& OrderList.get(i).getPhotograph().equals(filter)) {
-                AdminTable.getItems().add(OrderList.get(i));
+            AdminTable.getItems().clear();
+            List<Order> OrderList = DatabaseController.getAdminOrders();
+            Photograph.setCellValueFactory(new PropertyValueFactory<>("Photograph"));
+            Status.setCellValueFactory(new PropertyValueFactory<>("Status"));
+            UserId.setCellValueFactory(new PropertyValueFactory<>("UserId"));
+            userName.setCellValueFactory(new PropertyValueFactory<>("username"));
+            userContact.setCellValueFactory(new PropertyValueFactory<>("usercontact"));
+            orderDate.setCellValueFactory(new PropertyValueFactory<>("orderdate"));
+
+            for (int i = 0; i < OrderList.size(); i++) {
+                if (filter != "" && OrderList.get(i).getPhotograph().equals(filter)) {
+                    AdminTable.getItems().add(OrderList.get(i));
+                } else if (filter == "") {
+                    AdminTable.getItems().add(OrderList.get(i));
+                }
             }
-            else if (filter==""){
-                AdminTable.getItems().add(OrderList.get(i));
-            }
-        }
+
     }
     public void filterTable(){
         updateTable(FilterField.getText());
