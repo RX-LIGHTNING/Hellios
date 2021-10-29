@@ -16,6 +16,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.sql.SQLException;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -43,8 +45,10 @@ public class ApplicationCoreController extends Application implements Initializa
 
         }
         try {
-            if (DatabaseController.isLoggedIn(login, password)) {
-                showMainMenu(st);
+            if (!login.equals("")) {
+                if (DatabaseController.isLoggedIn(login, password)) {
+                    showMainMenu(st);
+                }
             }
             else {
                 showSignInMenu(st);
@@ -52,6 +56,10 @@ public class ApplicationCoreController extends Application implements Initializa
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidKeySpecException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
 

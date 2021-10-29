@@ -18,6 +18,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -34,7 +35,7 @@ public class SignInController  {
 
 
         @FXML
-    protected void authorizationApply() throws NoSuchAlgorithmException, IOException, SQLException {
+    protected void authorizationApply() throws NoSuchAlgorithmException, IOException, SQLException, InvalidKeySpecException {
         if (!LoginText.getText().isEmpty() && !PasswordText.getText().isEmpty()) {
 
             if (DatabaseController.isLoggedIn(LoginText.getText(), PasswordText.getText())) {

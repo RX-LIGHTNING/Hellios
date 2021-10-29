@@ -2,6 +2,7 @@ package com.example.demo;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
@@ -58,8 +59,14 @@ public final class DatabaseController {
         }
     }
     public static void userInsert(String login, String password,String contacts) throws NoSuchAlgorithmException, InvalidKeySpecException {
-
-        System.out.println(password);
+        SecureRandom random = new SecureRandom();
+        byte[] salt = new byte[16];
+        random.nextBytes(salt);
+        salt = login.getBytes();
+        KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 128);
+        SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+        byte[] hash = factory.generateSecret(spec).getEncoded();
+        password = Base64.getEncoder().encodeToString(hash);
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(USER_INSERT_QUERY)) {
             preparedStatement.setString(1,login);
@@ -84,8 +91,16 @@ public final class DatabaseController {
 
         return result;
     }
-    public static boolean isLoggedIn(String login, String password) throws SQLException {
+    public static boolean isLoggedIn(String login, String password) throws SQLException, InvalidKeySpecException, NoSuchAlgorithmException {
         boolean result = false;
+        SecureRandom random = new SecureRandom();
+        byte[] salt = new byte[16];
+        random.nextBytes(salt);
+        salt = login.getBytes();
+        KeySpec spec = new PBEKeySpec(password.toCharArray(), salt, 65536, 128);
+        SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+        byte[] hash = factory.generateSecret(spec).getEncoded();
+        password = Base64.getEncoder().encodeToString(hash);
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(USER_SELECT_QUERY)) {
             preparedStatement.setString(1,login);
