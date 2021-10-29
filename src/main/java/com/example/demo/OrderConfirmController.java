@@ -11,8 +11,10 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Objects;
-
 
 public class OrderConfirmController {
     @FXML
@@ -38,9 +40,15 @@ public class OrderConfirmController {
 
         if(Objects.nonNull(DataPicker.getValue()) && !UserContact.isEmpty() && Objects.nonNull(UserNameField)) {
             java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(DataPicker.getValue());
-            DatabaseController.insertOrder(PhotographName, UserNameField.getText(), UserContact,gettedDatePickerDate);
-            menuController.createNotification("Your order has been created",3000);
-            menuController.setPhotographsListSlide();
+            java.sql.Date CurrentDate = new java.sql.Date(Calendar.getInstance().getTime().getTime());
+            if(gettedDatePickerDate.after(CurrentDate)) {
+                DatabaseController.insertOrder(PhotographName, UserNameField.getText(), UserContact, gettedDatePickerDate);
+                menuController.createNotification("Your order has been created", 3000);
+                menuController.setPhotographsListSlide();
+            }
+            else {
+
+            }
             
             //
         }

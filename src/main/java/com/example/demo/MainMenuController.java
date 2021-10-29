@@ -19,10 +19,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import org.postgresql.core.Notification;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public final class MainMenuController implements Initializable {
     private double xOffset = 0;
@@ -51,12 +52,23 @@ public final class MainMenuController implements Initializable {
      adminbutton1.setVisible(false);
      adminbutton11.setVisible(false);
 
-     Username.setText("Welcome back, " + User.Login);
+        try {
+            Scanner scanner = new Scanner(new File("Options.dat"));
+            if(scanner.hasNextLine()){
+                setBackgroundImage(scanner.nextLine());
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        Username.setText("Welcome back, " + User.Login);
         try {
             UIworkspace.setCenter(loadScene("WelcomePage"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         if(User.getStatus()){
          adminbutton.setVisible(true);
          adminbutton1.setVisible(true);
@@ -87,6 +99,9 @@ public final class MainMenuController implements Initializable {
     @FXML
     private void setSignOutSlide() throws IOException {
         ApplicationCoreController.showSignInMenu(ApplicationCoreController.st);
+        FileWriter fileWriter = new FileWriter(new File("Profile.dat"),false);
+        fileWriter.append("");
+        fileWriter.flush();
         User.clearUser();
     }
 
@@ -133,9 +148,13 @@ public final class MainMenuController implements Initializable {
             UIworkspace.setCenter(loadScene("UserInfo"));
         }
     }
-    public void setBackgroundImage(String URL){ BackgroundImage.setImage(new Image("file:///"+URL)); }
-    public void setApplicationTheme(String URL){
-        MainPane.getStylesheets().add("file:///"+URL);
+    public void setBackgroundImage(String URL){
+        if(URL!="") {
+            BackgroundImage.setImage(new Image("file:///" + URL));
+        }
+        else if(URL ==""){
+            BackgroundImage.setImage(null);
+        }
     }
     @FXML
     public static Parent loadScene(String scene) throws IOException {

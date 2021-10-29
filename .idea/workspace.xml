@@ -10,10 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added movability to all windows in application">
+      <change afterPath="$PROJECT_DIR$/Options.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Profile.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_10_2021_19_48_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_10_2021_19_48__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.docx" beforeDir="false" afterPath="$PROJECT_DIR$/output.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/OptionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OptionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderConfirmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderConfirmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Options.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Options.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographControl.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographControl.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographLabel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographLabel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Registration.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Registration.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/SingIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/SingIn.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,6 +354,11 @@
           <properties class="java.lang.IllegalStateException" package="java.lang" />
           <option name="timeStamp" value="23" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/demo/SignInController.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -351,6 +371,7 @@
         <watch expression="connection" />
         <watch expression="mainMenuController.Username" />
         <watch expression="mainMenuController.Username" />
+        <watch expression="login" />
       </configuration>
     </watches-manager>
   </component>

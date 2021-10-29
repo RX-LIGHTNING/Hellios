@@ -72,12 +72,11 @@ public class AdminPanelController implements Initializable {
     }
     public void printHistory() throws IOException {
         if (User.getStatus()) {
-            String filePath = "C:\\Games\\SnusPablo.xlsx";
+            String filePath = "2.xlsx";
             List<Order> OrderList = DatabaseController.getOrders();
             Workbook excelWookBook = new XSSFWorkbook();
             Sheet employeeSheet = excelWookBook.createSheet("Orders");
             Row headerRow = employeeSheet.createRow(0);
-
             headerRow.createCell(0).setCellValue("Photograph");
             headerRow.createCell(1).setCellValue("Contacts");
             headerRow.createCell(2).setCellValue("OrderDate");

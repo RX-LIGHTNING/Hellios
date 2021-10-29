@@ -1,7 +1,15 @@
 package com.example.demo;
 
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.KeySpec;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.Objects;
 
@@ -49,7 +57,9 @@ public final class DatabaseController {
             e.printStackTrace();
         }
     }
-    public static void userInsert(String login, String password,String contacts) {
+    public static void userInsert(String login, String password,String contacts) throws NoSuchAlgorithmException, InvalidKeySpecException {
+
+        System.out.println(password);
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(USER_INSERT_QUERY)) {
             preparedStatement.setString(1,login);

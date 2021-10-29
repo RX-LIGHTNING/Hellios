@@ -3,6 +3,7 @@ package com.example.demo;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -10,9 +11,17 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.Objects;
+import java.util.ResourceBundle;
+import java.util.Scanner;
 
-public class ApplicationCoreController extends Application {
+public class ApplicationCoreController extends Application implements Initializable {
     static Stage st;
     private static double xOffset = 0;
     private static double yOffset = 0;
@@ -20,7 +29,32 @@ public class ApplicationCoreController extends Application {
     public void start(Stage stage) throws IOException {
         stage.initStyle(StageStyle.UNDECORATED);
         st = stage;
-        showSignInMenu(st);
+        Scanner scanner = null;
+        String login = new String();
+        String password = new String();
+        try {
+            scanner = new Scanner(new File("Profile.dat"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        if(scanner.hasNextLine()){
+            login = scanner.nextLine();
+            password = scanner.nextLine();
+
+        }
+        try {
+            if (DatabaseController.isLoggedIn(login, password)) {
+                showMainMenu(st);
+            }
+            else {
+                showSignInMenu(st);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public static void showSignInMenu(Stage stage) throws IOException {
@@ -45,7 +79,7 @@ public class ApplicationCoreController extends Application {
     }
 
     public static void showMainMenu(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(ApplicationCoreController.class.getResource("MainMenu.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(ApplicationCoreController.class.getResource("MainMenu.fxml")));
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
@@ -88,5 +122,10 @@ public class ApplicationCoreController extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 }

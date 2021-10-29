@@ -22,9 +22,10 @@
       <PasswordField fx:id="PasswordText" layoutX="234.0" layoutY="231.0" promptText="Password" style="-fx-background-color: #000000;" />
       <TextField fx:id="LoginText" layoutX="235.0" layoutY="200.0" promptText="Login" style="-fx-background-color: #000000;" />
       <PasswordField fx:id="PasswordText1" layoutX="235.0" layoutY="264.0" promptText="Confirm Password" style="-fx-background-color: #000000;" />
-      <Button fx:id="ExitButton1" layoutX="235.0" layoutY="338.0" mnemonicParsing="false" onAction="#toSignIn" prefHeight="27.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-border-color: #000000; -fx-border-radius: 25;" text="Back" textFill="#404040" />
-      <Button fx:id="SignIn" defaultButton="true" layoutX="308.0" layoutY="339.0" mnemonicParsing="false" onAction="#authorizationApply" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #000000;" text="Sing Up" />
+      <Button fx:id="ExitButton1" layoutX="234.0" layoutY="359.0" mnemonicParsing="false" onAction="#toSignIn" prefHeight="27.0" prefWidth="60.0" style="-fx-background-color: #000000; -fx-border-color: #000000; -fx-border-radius: 25;" text="Back" textFill="#404040" />
+      <Button fx:id="SignIn" defaultButton="true" layoutX="308.0" layoutY="360.0" mnemonicParsing="false" onAction="#authorizationApply" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #000000;" text="Sing Up" />
       <Button fx:id="ExitButton" layoutX="549.0" layoutY="13.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="12.0" prefWidth="37.0" style="-fx-background-color: #000000; -fx-border-color: #000000; -fx-border-radius: 25;" text="Exit" textFill="#404040" />
       <TextField fx:id="Contacts" layoutX="235.0" layoutY="299.0" promptText="Contacts" style="-fx-background-color: #000000;" />
+      <Label fx:id="StatusLabel" alignment="CENTER" layoutX="234.0" layoutY="335.0" prefHeight="17.0" prefWidth="149.0" textFill="#970707" />
    </children>
 </Pane>
