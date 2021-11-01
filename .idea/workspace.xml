@@ -10,11 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="minor bug fixes and added remember me button">
-      <change afterPath="$PROJECT_DIR$/2.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/2.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Options.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Options.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.docx" beforeDir="false" afterPath="$PROJECT_DIR$/output.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

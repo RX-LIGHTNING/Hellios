@@ -126,7 +126,6 @@ public class OrderHistoryController implements Initializable {
                     text = text.replace("photo", temp.getPhotograph());
                     text = text.replace("date", temp.getOrderdate().toString());
                     run.setText(text,0);
-                    System.out.println(text);
                 }
             }
             document.write(new FileOutputStream("output.docx"));

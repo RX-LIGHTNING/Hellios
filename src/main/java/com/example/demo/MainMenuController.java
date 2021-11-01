@@ -21,9 +21,7 @@ import org.postgresql.core.Notification;
 
 import java.io.*;
 import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
-import java.util.Scanner;
+import java.util.*;
 
 public final class MainMenuController implements Initializable {
     private double xOffset = 0;
