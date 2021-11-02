@@ -9,11 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Password hashing improvement and options save file">
-      <change afterPath="$PROJECT_DIR$/Profile.dat" afterDir="false" />
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="File not found bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profile.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.docx" beforeDir="false" afterPath="$PROJECT_DIR$/output.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderConfirmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderConfirmController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/OrderConfirm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/OrderConfirm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/WelcomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/WelcomePage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,13 +43,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Order.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/demo/History.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/demo/admin.fxml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/Order.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/demo/AdminPanelController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1zMAIdqtarReUpkOak9cGmUgw4c" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -299,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635756087716</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="File not found bug fix">
+      <created>1635817037396</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1635817037396</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,7 +352,8 @@
     <MESSAGE value="Added movability to all windows in application" />
     <MESSAGE value="minor bug fixes and added remember me button" />
     <MESSAGE value="Password hashing improvement and options save file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Password hashing improvement and options save file" />
+    <MESSAGE value="File not found bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="File not found bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

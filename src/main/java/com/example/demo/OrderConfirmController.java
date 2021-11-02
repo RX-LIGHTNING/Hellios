@@ -3,6 +3,7 @@ package com.example.demo;
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import org.apache.poi.ss.usermodel.CreationHelper;
 import org.apache.poi.ss.usermodel.Row;
@@ -25,7 +26,8 @@ public class OrderConfirmController {
     private CheckBox ContactCheckBox;
     @FXML
     private TextField ContactText;
-
+    @FXML
+    private Label Status;
     private MainMenuController menuController;
     private String PhotographName;
     private String UserContact;
@@ -47,13 +49,13 @@ public class OrderConfirmController {
                 menuController.setPhotographsListSlide();
             }
             else {
-
+                Status.setText("Please select correct date.");
+                Status.setStyle("-fx-background-color:red;");
             }
             
             //
         }
-
-
-
+        else {Status.setText("Enter correct data");Status.setStyle("-fx-background-color:red;");
+        }
     }
 }

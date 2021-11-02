@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="536.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="131.0" layoutY="14.0" text="Welcome to Hellios application">
@@ -15,7 +14,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="33.0" layoutY="44.0" prefHeight="184.0" prefWidth="471.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id libero tortor. Donec volutpat ex vel accumsan commodo. In eleifend odio arcu, ultrices faucibus erat sollicitudin eu. Curabitur vitae nibh lacinia, auctor velit eu, malesuada libero. Curabitur ut mollis leo. Maecenas id elit sem. Fusce tempus sagittis urna ac bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent id justo pulvinar, ultricies dui ut, faucibus urna. Pellentesque dignissim nisl et nulla malesuada, a mattis magna condimentum. Sed quis metus luctus, porttitor mi ut, convallis justo. Nullam in iaculis mi, sed pellentesque enim. Vivamus eu dui ut sem tincidunt efficitur vel ac tellus." textAlignment="CENTER" wrapText="true">
+      <Label layoutX="33.0" layoutY="44.0" prefHeight="184.0" prefWidth="471.0" text="Hellios is the best application for our customers, there we can provide out services and make our services much comfortable for users. To make an order you have to click on &quot;photograph&quot; page and select photograph who benifits to your requirements, after that you will have to insert some information and after that we'll call you" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="13.0" />
          </font>
@@ -31,6 +30,5 @@
             <Image url="@images/3.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="145.0" layoutY="383.0" text="ВОЛОДЯ" />
    </children>
 </Pane>

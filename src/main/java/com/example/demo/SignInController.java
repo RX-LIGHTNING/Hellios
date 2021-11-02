@@ -2,6 +2,7 @@ package com.example.demo;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -33,8 +34,7 @@ public class SignInController  {
     @FXML
     private CheckBox RememberCheckBox;
 
-
-        @FXML
+    @FXML
     protected void authorizationApply() throws NoSuchAlgorithmException, IOException, SQLException, InvalidKeySpecException {
         if (!LoginText.getText().isEmpty() && !PasswordText.getText().isEmpty()) {
 
@@ -52,12 +52,12 @@ public class SignInController  {
             else {
                 LoginText.setStyle("-fx-border-color: red;");
                 PasswordText.setStyle("-fx-border-color: red;");
-                StatusLabel.setText("Incorrect password, check your password or login");
+                StatusLabel.setText("Autorization failed, check your password or login");
             }
         } else {
             LoginText.setStyle("-fx-border-color: red;");
             PasswordText.setStyle("-fx-border-color: red;");
-            StatusLabel.setText("One of fields is empty");
+            StatusLabel.setText("Enter correct data");
         };
     }
 
@@ -65,7 +65,6 @@ public class SignInController  {
     protected void registrationApply() throws NoSuchAlgorithmException, IOException {
         ApplicationCoreController.showRegistrationMenu(ApplicationCoreController.st);
     }
-
     @FXML
     protected void exitApplication() {
         System.exit(1);
