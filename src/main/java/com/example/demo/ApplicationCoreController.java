@@ -38,6 +38,9 @@ public class ApplicationCoreController extends Application implements Initializa
             scanner = new Scanner(new File("Profile.dat"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            FileWriter writer = new FileWriter("Profile.dat");
+            writer.flush();
+            scanner = new Scanner(new File("Profile.dat"));
         }
         if(scanner.hasNextLine()){
             login = scanner.nextLine();

@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="minor bug fixes and added remember me button">
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Password hashing improvement and options save file">
+      <change afterPath="$PROJECT_DIR$/Profile.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/2.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Options.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Options.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profile.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Profile.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.docx" beforeDir="false" afterPath="$PROJECT_DIR$/output.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OrderHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/ApplicationCoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/NotificationController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635545970739</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Password hashing improvement and options save file">
+      <created>1635756087716</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1635756087716</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,7 +341,8 @@
     <MESSAGE value="added agreement and excel table autocreate system" />
     <MESSAGE value="Added movability to all windows in application" />
     <MESSAGE value="minor bug fixes and added remember me button" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor bug fixes and added remember me button" />
+    <MESSAGE value="Password hashing improvement and options save file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Password hashing improvement and options save file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
