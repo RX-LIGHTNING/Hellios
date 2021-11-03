@@ -69,9 +69,9 @@ public class Order {
         return Id;
     }
 
-    public Order(int id,int userId, String photograph_name, boolean status, String user_name, String user_contact, Date order_date) {
+    public Order(int id,int userId, String photograph_name, int status, String user_name, String user_contact, Date order_date) {
         this.Photograph = photograph_name;
-        this.Status = status ? "Done." : "In progress.";
+        this.Status = (status == 1) ? "Done." : (status == 0) ? "In progress." : (status == -1)?"Canceled" : "undefined"; //(status == -1)?"Canceled" :
         this.UserId = userId;
         this.username=user_name;
         this.usercontact = user_contact;

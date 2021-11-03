@@ -32,7 +32,7 @@ public final class DatabaseController {
     private static final String PHOTOGRAPH_SELECT_QUERY = "SELECT * FROM photographs";
     private static final String ORDERS_SELECT_QUERY = "SELECT * FROM orders WHERE user_id = ?";
     private static final String ADMIN_ORDERS_SELECT_QUERY = "SELECT * FROM orders";
-    private static final String ORDERS_UPDATE_QUERY = "UPDATE orders SET status = true WHERE id = ?";
+    private static final String ORDERS_UPDATE_QUERY = "UPDATE orders SET status = 1 WHERE id = ?";
     private static final String PHOTOGRAPH_UPDATE_QUERY = "UPDATE photographs SET photograph_name = ?, description = ? WHERE id = ?";
     private static final String PHOTOGRAPH_DELETE_QUERY = "DELETE FROM photographs WHERE id = ?";
     private static final String PHOTOGRAPH_INSERT_QUERY = "INSERT INTO photographs (photograph_name, description) VALUES (?,?)";
@@ -184,7 +184,7 @@ public final class DatabaseController {
                                     resultSet.getInt("id"),
                                     resultSet.getInt("user_id"),
                                     resultSet.getString("photograph_name"),
-                                    resultSet.getBoolean("status"),
+                                    resultSet.getInt("status"),
                                     resultSet.getString("user_name"),
                                     resultSet.getString("user_contact"),
                                     resultSet.getDate("order_date")));
@@ -209,7 +209,7 @@ public final class DatabaseController {
                                     resultSet.getInt("id"),
                                     resultSet.getInt("user_id"),
                                     resultSet.getString("photograph_name"),
-                                    resultSet.getBoolean("status"),
+                                    resultSet.getInt("status"),
                                     resultSet.getString("user_name"),
                                     resultSet.getString("user_contact"),
                                     resultSet.getDate("order_date")));
