@@ -15,6 +15,7 @@ import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 public class OptionsController {
     public Text currentContact;
@@ -47,10 +48,13 @@ public class OptionsController {
         currentContact.setText("Current contact information: "+User.getContact());
     }
     public void changeContacts(){
-        if(!ContactTextField.getText().isEmpty()) {
+        if(!ContactTextField.getText().isEmpty() &&Pattern.matches("\\+\\d{12}",ContactTextField.getText()))  {
             DatabaseController.userContactUpdate(ContactTextField.getText());
             User.setContact(ContactTextField.getText());
             currentContact.setText("Current contact information: " + User.getContact());
+        }
+        else{
+            ContactTextField.setStyle("-fx-border-color:red;");
         }
     }
     public void backgroundFileSelecter() throws IOException {

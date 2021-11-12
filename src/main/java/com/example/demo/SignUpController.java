@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 import java.sql.SQLException;
+import java.util.regex.Pattern;
 
 public class SignUpController {
     @FXML
@@ -23,15 +24,22 @@ public class SignUpController {
     @FXML
     protected void authorizationApply() throws NoSuchAlgorithmException, IOException, SQLException, InvalidKeySpecException {
         if(PasswordText.getText().equals(PasswordText1.getText()) && !LoginText.getText().isEmpty() && !PasswordText.getText().isEmpty() &&!Contacts.getText().isEmpty()) {
-            if(!DatabaseController.isUserExist(LoginText.getText())) {
-                DatabaseController.userInsert(LoginText.getText(), PasswordText.getText(), Contacts.getText());
-                ApplicationCoreController.showSignInMenu(ApplicationCoreController.st);
+            if(Pattern.matches("\\+\\d{12}",Contacts.getText())) {
+                if (!DatabaseController.isUserExist(LoginText.getText())) {
+                    DatabaseController.userInsert(LoginText.getText(), PasswordText.getText(), Contacts.getText());
+                    ApplicationCoreController.showSignInMenu(ApplicationCoreController.st);
+                } else {
+                    LoginText.setStyle("-fx-border-color: red;");
+                    PasswordText.setStyle("-fx-border-color: red;");
+                    Contacts.setStyle("-fx-border-color: red;");
+                    StatusLabel.setText("User with that login already exists");
+                }
             }
-            else{
+            else {
                 LoginText.setStyle("-fx-border-color: red;");
                 PasswordText.setStyle("-fx-border-color: red;");
                 Contacts.setStyle("-fx-border-color: red;");
-                StatusLabel.setText("User with that login already exists");
+                StatusLabel.setText("Please type your phone number");
             }
         }else {
             LoginText.setStyle("-fx-border-color: red;");
