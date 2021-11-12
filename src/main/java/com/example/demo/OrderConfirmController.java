@@ -16,6 +16,7 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 public class OrderConfirmController {
     @FXML
@@ -44,9 +45,15 @@ public class OrderConfirmController {
             java.sql.Date gettedDatePickerDate = java.sql.Date.valueOf(DataPicker.getValue());
             java.sql.Date CurrentDate = new java.sql.Date(Calendar.getInstance().getTime().getTime());
             if(gettedDatePickerDate.after(CurrentDate)) {
-                DatabaseController.insertOrder(PhotographName, UserNameField.getText(), UserContact, gettedDatePickerDate);
-                menuController.createNotification("Your order has been created", 3000);
-                menuController.setPhotographsListSlide();
+                if(Pattern.matches("\\+\\d{12}",UserContact)) {
+                    DatabaseController.insertOrder(PhotographName, UserNameField.getText(), UserContact, gettedDatePickerDate);
+                    menuController.createNotification("Your order has been created", 3000);
+                    menuController.setPhotographsListSlide();
+                }
+                else {
+                    Status.setText("Please input correct contacts");
+                    Status.setStyle("-fx-background-color:red;");
+                }
             }
             else {
                 Status.setText("Please select correct date.");
