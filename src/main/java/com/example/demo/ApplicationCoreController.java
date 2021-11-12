@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.postgresql.PGNotification;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,13 +23,13 @@ import java.sql.SQLException;
 import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-
 public class ApplicationCoreController extends Application implements Initializable {
+
     static Stage st;
     private static double xOffset = 0;
     private static double yOffset = 0;
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws IOException{
         stage.initStyle(StageStyle.UNDECORATED);
         st = stage;
         Scanner scanner = null;

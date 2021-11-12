@@ -54,7 +54,7 @@ public class AdminPanelController implements Initializable {
             orderDate.setCellValueFactory(new PropertyValueFactory<>("orderdate"));
 
             for (int i = 0; i < OrderList.size(); i++) {
-                if (filter != "" && OrderList.get(i).getPhotograph().equals(filter)) {
+                if (filter != "" && OrderList.get(i).getPhotograph().contains(filter)) {
                     AdminTable.getItems().add(OrderList.get(i));
                 } else if (filter == "") {
                     AdminTable.getItems().add(OrderList.get(i));
@@ -67,8 +67,17 @@ public class AdminPanelController implements Initializable {
     }
     public void finishOrder(){
         Order temp = AdminTable.getSelectionModel().getSelectedItem();
-        DatabaseController.updateOrder(temp.getId());
-        updateTable(FilterField.getText());
+        if(temp.getStatus()!="Canceled") {
+            DatabaseController.updateOrder(temp.getId(), 1);
+            updateTable(FilterField.getText());
+        }
+    }
+    public void CancelOrder(){
+        Order temp = AdminTable.getSelectionModel().getSelectedItem();
+        if(temp.getStatus()!="Done.") {
+            DatabaseController.updateOrder(temp.getId(), -1);
+            updateTable(FilterField.getText());
+        }
     }
     public void printHistory() throws IOException {
         if (User.getStatus()) {

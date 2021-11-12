@@ -8,9 +8,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="540.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.OrderHistoryController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="537.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.OrderHistoryController">
    <children>
-      <TableView fx:id="Table" accessibleRole="BUTTON" editable="true" layoutX="19.0" layoutY="63.0" pickOnBounds="false" prefHeight="328.0" prefWidth="503.0">
+      <TableView fx:id="Table" accessibleRole="BUTTON" editable="true" layoutX="17.0" layoutY="80.0" pickOnBounds="false" prefHeight="328.0" prefWidth="503.0">
         <columns>
           <TableColumn fx:id="Photograph" prefWidth="249.0" style="-fx-background-color: #111111; -fx-alignment: CENTER;" text="Photograph" />
           <TableColumn fx:id="Status" prefWidth="250.0" style="-fx-background-color: #111111; -fx-alignment: center;" text="status" />
@@ -24,10 +24,11 @@
             <Insets />
          </opaqueInsets>
       </TableView>
-      <TextField fx:id="FilterField" alignment="CENTER" layoutX="19.0" layoutY="27.0" prefHeight="25.0" prefWidth="214.0" promptText="Photograph name" />
-      <Button layoutX="424.0" layoutY="27.0" mnemonicParsing="false" onAction="#filterTable" text="Apply Filter" textAlignment="CENTER" />
-      <CheckBox fx:id="FilterCheck" layoutX="255.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Only in progress" />
-      <Button layoutX="308.0" layoutY="391.0" mnemonicParsing="false" onAction="#printHistory" prefHeight="25.0" prefWidth="214.0" text="Get excel file" />
-      <Button layoutX="19.0" layoutY="391.0" mnemonicParsing="false" onAction="#printAgreement" prefHeight="25.0" prefWidth="198.0" text="Get Agreement pattern" />
+      <TextField fx:id="FilterField" alignment="CENTER" layoutX="17.0" layoutY="44.0" prefHeight="25.0" prefWidth="214.0" promptText="Photograph name" />
+      <Button layoutX="422.0" layoutY="44.0" mnemonicParsing="false" onAction="#filterTable" text="Apply Filter" textAlignment="CENTER" />
+      <CheckBox fx:id="FilterCheck" layoutX="253.0" layoutY="44.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Only in progress" />
+      <Button layoutX="306.0" layoutY="408.0" mnemonicParsing="false" onAction="#printHistory" prefHeight="25.0" prefWidth="214.0" text="Get excel file" />
+      <Button layoutX="17.0" layoutY="408.0" mnemonicParsing="false" onAction="#printAgreement" prefHeight="25.0" prefWidth="198.0" text="Get Agreement pattern" />
+      <Button layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#CancelOrder" text="Cancel order" />
    </children>
 </Pane>

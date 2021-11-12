@@ -3,7 +3,14 @@
     -fx-font-family: "Organetto";
     -fx-text-fill: white;
     -fx-background-color:transparent;
+    -fx-border-color:none;
 }
+#NavBar{
+    -fx-border-color:none;
+}
+#orderbutton{
+                -fx-border-color:none;
+            }
 #SgnOutBtn{
 	-fx-font-size: 11pt;
     -fx-font-family: "Organetto";
@@ -112,9 +119,10 @@
 -fx-text-fill: #FFFFFF;
 }
 .button {
-    -fx-padding: 5 22 5 22;   
+    -fx-padding: 5 20 5 20;
     -fx-background-radius: 0;
     -fx-background-color:transparent;
+    -fx-border-color:#d8d8d8;
     -fx-font-family: "Organetto";
     -fx-font-size: 10pt;
     -fx-text-fill: #d8d8d8;

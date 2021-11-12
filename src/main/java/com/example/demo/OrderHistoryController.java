@@ -63,7 +63,7 @@ public class OrderHistoryController implements Initializable {
         Date.setCellValueFactory(new PropertyValueFactory<>("orderdate"));
         for (int i = 0; i < OrderList.size(); i++) {
 
-            if (filter!=""&& OrderList.get(i).getPhotograph().equals(filter)) {
+            if (filter!=""&& OrderList.get(i).getPhotograph().contains(filter)) {
                 if(checkbox && OrderList.get(i).getStatus().equals("In progress."))
                 Table.getItems().add(OrderList.get(i));
                 else if (!checkbox){
@@ -83,6 +83,13 @@ public class OrderHistoryController implements Initializable {
     public void filterTable() throws IOException {
         updateTable(FilterField.getText(), FilterCheck.isSelected());
         ParentController.createNotification("Table is Filtered",3000);
+    }
+    public void CancelOrder(){
+        Order temp = Table.getSelectionModel().getSelectedItem();
+        if(temp.getStatus()!="Done.") {
+            DatabaseController.updateOrder(temp.getId(), -1);
+            updateTable(FilterField.getText(),FilterCheck.isSelected());
+        }
     }
     public void printHistory() throws IOException {
 

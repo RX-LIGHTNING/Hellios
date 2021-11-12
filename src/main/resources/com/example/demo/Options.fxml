@@ -7,7 +7,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.OptionsController">
    <children>
-      <Button layoutX="420.0" layoutY="45.0" mnemonicParsing="false" onAction="#ChangeBackgroundImage" text="Set background image" />
+      <Button layoutX="390.0" layoutY="45.0" mnemonicParsing="false" onAction="#ChangeBackgroundImage" prefHeight="25.0" prefWidth="120.0" text="Set background image" />
       <TextField fx:id="PictureURL" layoutX="131.0" layoutY="45.0" prefHeight="25.0" prefWidth="158.0" promptText="picture url" />
       <Text fill="WHITE" layoutX="143.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visual options" textAlignment="CENTER" wrappingWidth="359.513671875" />
       <Text fill="WHITE" layoutX="14.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="background image" />
@@ -15,7 +15,7 @@
       <Text fx:id="currentContact" fill="WHITE" layoutX="81.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current contact information:" />
       <TextField fx:id="ContactTextField" layoutX="77.0" layoutY="188.0" prefHeight="25.0" prefWidth="158.0" promptText="Enter new contact infirmation" />
       <Button fx:id="ContactConfirm" layoutX="247.0" layoutY="188.0" mnemonicParsing="false" onAction="#changeContacts" text="Change Contact " />
-      <Button layoutX="300.0" layoutY="45.0" mnemonicParsing="false" onAction="#backgroundFileSelecter" prefHeight="25.0" prefWidth="104.0" text="Choose file" />
+      <Button layoutX="300.0" layoutY="45.0" mnemonicParsing="false" onAction="#backgroundFileSelecter" prefHeight="25.0" prefWidth="80.0" text="Choose file" />
       <Button layoutX="246.0" layoutY="88.0" mnemonicParsing="false" onAction="#dropSettings" text="Drop visual settings" textAlignment="CENTER" />
    </children>
 </Pane>

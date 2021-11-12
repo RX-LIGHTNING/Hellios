@@ -32,7 +32,7 @@ public final class DatabaseController {
     private static final String PHOTOGRAPH_SELECT_QUERY = "SELECT * FROM photographs";
     private static final String ORDERS_SELECT_QUERY = "SELECT * FROM orders WHERE user_id = ?";
     private static final String ADMIN_ORDERS_SELECT_QUERY = "SELECT * FROM orders";
-    private static final String ORDERS_UPDATE_QUERY = "UPDATE orders SET status = 1 WHERE id = ?";
+    private static final String ORDERS_UPDATE_QUERY = "UPDATE orders SET status = ? WHERE id = ?";
     private static final String PHOTOGRAPH_UPDATE_QUERY = "UPDATE photographs SET photograph_name = ?, description = ? WHERE id = ?";
     private static final String PHOTOGRAPH_DELETE_QUERY = "DELETE FROM photographs WHERE id = ?";
     private static final String PHOTOGRAPH_INSERT_QUERY = "INSERT INTO photographs (photograph_name, description) VALUES (?,?)";
@@ -237,11 +237,12 @@ public final class DatabaseController {
             e.printStackTrace();
         }
     }
-    public static void updateOrder(int id) {
+    public static void updateOrder(int id,int inputvalue) {
         if (DatabaseController.getUserStatus(User.getLogin())) {
             try (Connection connection = getConnection();
                  PreparedStatement preparedStatement = connection.prepareStatement(ORDERS_UPDATE_QUERY)) {
-                preparedStatement.setInt(1, id);
+                preparedStatement.setInt(1, inputvalue);
+                preparedStatement.setInt(2, id);
                 preparedStatement.execute();
             } catch (SQLException e) {
                 e.printStackTrace();
