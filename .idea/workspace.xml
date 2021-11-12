@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="added notification system to admin pages">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/SignUpController.java" afterDir="false" />
-    </list>
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="added regex check to contact during order confirm" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -325,7 +322,21 @@
       <option name="project" value="LOCAL" />
       <updated>1636704372893</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="added regex check to contact during registration">
+      <created>1636707194720</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1636707194720</updated>
+    </task>
+    <task id="LOCAL-00030" summary="added regex check to contact during order confirm">
+      <created>1636707326674</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1636707326674</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -372,7 +383,9 @@
     <MESSAGE value="Rewrote order class" />
     <MESSAGE value="Improved data filtering" />
     <MESSAGE value="added notification system to admin pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added notification system to admin pages" />
+    <MESSAGE value="added regex check to contact during registration" />
+    <MESSAGE value="added regex check to contact during order confirm" />
+    <option name="LAST_COMMIT_MESSAGE" value="added regex check to contact during order confirm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

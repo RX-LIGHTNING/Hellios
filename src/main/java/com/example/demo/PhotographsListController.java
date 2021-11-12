@@ -79,5 +79,9 @@ public class PhotographsListController  {
         filter = filterField.getText();
         updateGrid(filter);
     }
+    public void ClearFilter(){
+        filter = "";
+        updateGrid(filter);
+    }
 }
 
