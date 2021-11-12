@@ -123,6 +123,7 @@
     -fx-background-radius: 0;
     -fx-background-color:transparent;
     -fx-border-color:#d8d8d8;
+    -fx-border-radius:5px;
     -fx-font-family: "Organetto";
     -fx-font-size: 10pt;
     -fx-text-fill: #d8d8d8;

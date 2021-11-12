@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.Objects;
@@ -24,11 +25,14 @@ public class PhotographEditController implements Initializable {
     private TableColumn DescriptionColumn;
     @FXML
     private TableView<Photograph> PhotographTable;
-    public void addPhotograph(){
+    private MainMenuController Parentcontroller;
+
+    public void addPhotograph() throws IOException {
 
         if(!PhotographName.getText().isEmpty()&&!PhotographDescription.getText().isEmpty()&&User.getStatus()) {
             DatabaseController.insertPhotograph(PhotographName.getText(), PhotographDescription.getText());
             updateTable();
+            Parentcontroller.createNotification("Photograph has been added", 3000);
         }
     }
     public void showPhotographInfo(){
@@ -36,18 +40,20 @@ public class PhotographEditController implements Initializable {
         PhotographName.setText(temp.getPhotograph());
         PhotographDescription.setText(temp.getDescription());
     }
-    public void updatePhotographInfo(){
+    public void updatePhotographInfo() throws IOException {
         Photograph temp = PhotographTable.getSelectionModel().getSelectedItem();
         if (Objects.nonNull(temp)) {
             DatabaseController.updatePhotograph(temp.getId(), PhotographName.getText(), PhotographDescription.getText());
             updateTable();
+            Parentcontroller.createNotification("Photograph has been updated", 3000);
         }
     }
-    public void deletePhotograph(){
+    public void deletePhotograph() throws IOException {
         Photograph temp = PhotographTable.getSelectionModel().getSelectedItem();
         if (Objects.nonNull(temp)) {
         DatabaseController.deletePhotograph(temp.getId());
             updateTable();
+            Parentcontroller.createNotification("Photograph has been deleted", 3000);
         }
     }
     public void updateTable(){
@@ -62,5 +68,9 @@ public class PhotographEditController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         updateTable();
+    }
+
+    public void setData(MainMenuController menuController) {
+        this.Parentcontroller = menuController;
     }
 }

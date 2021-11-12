@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="538.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.PhotographsListController">
-   <content>
-      <GridPane fx:id="PhotoGrid" alignment="CENTER" prefHeight="0.0" prefWidth="0.0" stylesheets="@Styles/DarkTheme.css">
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-      </GridPane>
-   </content>
-</ScrollPane>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.PhotographsListController">
+   <children>
+      <ScrollPane layoutY="31.0" prefHeight="369.0" prefWidth="593.0" style="-fx-background-color: transparent;">
+         <content>
+            <GridPane fx:id="PhotoGrid" prefHeight="0.0" prefWidth="0.0">
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <TextField fx:id="filterField" layoutX="7.0" layoutY="2.0" prefHeight="25.0" prefWidth="188.0" promptText="Photograph name" />
+      <Button layoutX="409.0" layoutY="2.0" mnemonicParsing="false" onAction="#setFilter" prefHeight="25.0" prefWidth="116.0" text="Apply filter" />
+   </children>
+</Pane>

@@ -38,9 +38,13 @@ public class AdminPanelController implements Initializable {
     private TextField FilterField;
     @FXML
     private TextField PhotographDescription;
+    private MainMenuController ParentController;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         updateTable("");
+    }
+    public void setData(MainMenuController parentController){
+        this.ParentController = parentController;
     }
     public void updateTable(String filter){
 
@@ -62,21 +66,25 @@ public class AdminPanelController implements Initializable {
             }
 
     }
-    public void filterTable(){
+    public void filterTable() throws IOException {
+        ParentController.createNotification("Table has been filtered", 3000);
         updateTable(FilterField.getText());
     }
-    public void finishOrder(){
+    public void finishOrder() throws IOException {
+
         Order temp = AdminTable.getSelectionModel().getSelectedItem();
-        if(temp.getStatus()!="Canceled") {
+        if(temp.getStatus()=="In progress.") {
             DatabaseController.updateOrder(temp.getId(), 1);
             updateTable(FilterField.getText());
+            ParentController.createNotification("Order has been finished", 3000);
         }
     }
-    public void CancelOrder(){
+    public void CancelOrder() throws IOException {
         Order temp = AdminTable.getSelectionModel().getSelectedItem();
-        if(temp.getStatus()!="Done.") {
+        if(temp.getStatus()=="In progress.") {
             DatabaseController.updateOrder(temp.getId(), -1);
             updateTable(FilterField.getText());
+            ParentController.createNotification("Order has been canceled", 3000);
         }
     }
     public void printHistory() throws IOException {

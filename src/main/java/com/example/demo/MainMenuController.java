@@ -85,7 +85,7 @@ public final class MainMenuController implements Initializable {
     public void setPhotographsListSlide() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
         fxmlLoader.setLocation(getClass().getResource("Photo.fxml"));
-        ScrollPane anchorPane = fxmlLoader.load();
+        Pane anchorPane = fxmlLoader.load();
         PhotographsListController controller = fxmlLoader.getController();
         controller.setData(MainMenuController.this);
         UIworkspace.setCenter(anchorPane);
@@ -115,13 +115,23 @@ public final class MainMenuController implements Initializable {
     @FXML
     private void setAdminPanel() throws IOException {
         if(User.getStatus()) {
-            UIworkspace.setCenter(loadScene("admin"));
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("admin.fxml"));
+            Pane anchorPane = fxmlLoader.load();
+            AdminPanelController controller = fxmlLoader.getController();
+            controller.setData(MainMenuController.this);
+            UIworkspace.setCenter(anchorPane);
         }
     }
     @FXML
     private void setPhotographControlSlide() throws IOException {
         if(User.getStatus()) {
-            UIworkspace.setCenter(loadScene("PhotographControl"));
+            FXMLLoader fxmlLoader = new FXMLLoader();
+            fxmlLoader.setLocation(getClass().getResource("PhotographControl.fxml"));
+            Pane anchorPane = fxmlLoader.load();
+            PhotographEditController controller = fxmlLoader.getController();
+            controller.setData(MainMenuController.this);
+            UIworkspace.setCenter(anchorPane);
         }
     }
     @FXML

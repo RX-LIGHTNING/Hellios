@@ -82,13 +82,14 @@ public class OrderHistoryController implements Initializable {
     }
     public void filterTable() throws IOException {
         updateTable(FilterField.getText(), FilterCheck.isSelected());
-        ParentController.createNotification("Table is Filtered",3000);
+        ParentController.createNotification("Table has been filtered",3000);
     }
-    public void CancelOrder(){
+    public void CancelOrder() throws IOException {
         Order temp = Table.getSelectionModel().getSelectedItem();
         if(temp.getStatus()!="Done.") {
             DatabaseController.updateOrder(temp.getId(), -1);
             updateTable(FilterField.getText(),FilterCheck.isSelected());
+            ParentController.createNotification("Order has been canceled", 1000);
         }
     }
     public void printHistory() throws IOException {
