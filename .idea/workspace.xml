@@ -9,15 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Fixed bug with gridpane in PhotographsListController">
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added logs page instead of user information">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/1.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.docx" beforeDir="false" afterPath="$PROJECT_DIR$/output.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/UserGetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LogsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/MainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/UserInfo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/GetLogs.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/LogsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LogsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/GetLogs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/GetLogs.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636707628269</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added logs page instead of user information">
+      <created>1637114172340</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1637114172340</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -402,7 +406,8 @@
     <MESSAGE value="added regex check to contact during registration" />
     <MESSAGE value="added regex check to contact during order confirm" />
     <MESSAGE value="Fixed bug with gridpane in PhotographsListController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with gridpane in PhotographsListController" />
+    <MESSAGE value="Added logs page instead of user information" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logs page instead of user information" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -36,6 +36,8 @@ public final class DatabaseController {
     private static final String PHOTOGRAPH_UPDATE_QUERY = "UPDATE photographs SET photograph_name = ?, description = ? WHERE id = ?";
     private static final String PHOTOGRAPH_DELETE_QUERY = "DELETE FROM photographs WHERE id = ?";
     private static final String PHOTOGRAPH_INSERT_QUERY = "INSERT INTO photographs (photograph_name, description) VALUES (?,?)";
+    private static final String LOGS_INSERT_QUERY ="INSERT INTO Logs (\"user\", action, \"table\", result) VALUES (?,?,?,?)";
+    private static final String LOGS_SELECT_QUERY ="SELECT * FROM Logs";
     private static Connection connection;
 
     public static Connection getConnection() {
@@ -120,24 +122,6 @@ public final class DatabaseController {
         return result;
     }
 
-    public static SelectedUser getUserInfo(int id) throws SQLException {
-        SelectedUser result = new SelectedUser("213","123");
-        try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(USER_SELECT_INFO_QUERY)) {
-            preparedStatement.setInt(1,id);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                result = new SelectedUser(resultSet.getString("login"),resultSet.getString("contacts"));
-                preparedStatement.close();
-
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
-
     public static boolean isUserExist(String login) throws SQLException {
         boolean result = false;
         try (Connection connection = getConnection();
@@ -197,6 +181,32 @@ public final class DatabaseController {
         }
         return result;
     }
+
+    public static List<Log> getLogs() {
+        List<Log> result = new ArrayList<>();
+        if(User.getStatus()) {
+            try (Connection connection = getConnection();
+                 PreparedStatement preparedStatement = connection.prepareStatement(LOGS_SELECT_QUERY)) {
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (Objects.nonNull(resultSet)) {
+                        while (resultSet.next()) {
+                            result.add(new Log(
+                                    resultSet.getString("user"),
+                                    resultSet.getString("action"),
+                                    resultSet.getString("table"),
+                                    resultSet.getString("result"))
+                            );
+                        }
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+
+            }
+        }
+        return result;
+    }
+
     public static List<Order> getAdminOrders() {
         List<Order> result = new ArrayList<>();
         if (DatabaseController.getUserStatus(User.getLogin())) {
@@ -244,6 +254,14 @@ public final class DatabaseController {
                 preparedStatement.setInt(1, inputvalue);
                 preparedStatement.setInt(2, id);
                 preparedStatement.execute();
+                switch (inputvalue){
+                    case (1):
+                        insertLog(User.getLogin(),"Orders","FINISHED",Integer.toString(id));
+                        break;
+                    case (-1):
+                        insertLog(User.getLogin(),"Orders","CANCELED",Integer.toString(id));
+                        break;
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -257,6 +275,7 @@ public final class DatabaseController {
                 preparedStatement.setString(2,description);
                 preparedStatement.setInt(3, id);
                 preparedStatement.executeUpdate();
+                insertLog(User.getLogin(),"Photographs","CHANGED",photograph);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -268,6 +287,7 @@ public final class DatabaseController {
                  PreparedStatement preparedStatement = connection.prepareStatement(PHOTOGRAPH_DELETE_QUERY)) {
                 preparedStatement.setInt(1, id);
                 preparedStatement.execute();
+                insertLog(User.getLogin(),"Photographs","DELETED",Integer.toString(id));
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -279,6 +299,21 @@ public final class DatabaseController {
                  PreparedStatement preparedStatement = connection.prepareStatement(PHOTOGRAPH_INSERT_QUERY)) {
                 preparedStatement.setString(1, name);
                 preparedStatement.setString(2, Description);
+                preparedStatement.execute();
+                insertLog(User.getLogin(),"Photographs","ADDED",name);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    public static void insertLog(String user, String table, String action, String result){
+        if (DatabaseController.getUserStatus(User.getLogin())) {
+            try (Connection connection = getConnection();
+                 PreparedStatement preparedStatement = connection.prepareStatement(LOGS_INSERT_QUERY)) {
+                preparedStatement.setString(1, user);
+                preparedStatement.setString(2, action);
+                preparedStatement.setString(3, table);
+                preparedStatement.setString(4, result);
                 preparedStatement.execute();
             } catch (SQLException e) {
                 e.printStackTrace();
