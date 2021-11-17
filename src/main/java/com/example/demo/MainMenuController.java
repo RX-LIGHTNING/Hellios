@@ -151,9 +151,9 @@ public final class MainMenuController implements Initializable {
         controller.setData(notify, time, MainMenuController.this);
         NotificationBar.setCenter(anchorPane);
     }
-    public void setUserInfo() throws IOException {
+    public void setLogs() throws IOException {
         if(User.getStatus()) {
-            UIworkspace.setCenter(loadScene("UserInfo"));
+            UIworkspace.setCenter(loadScene("GetLogs"));
         }
     }
     public void setBackgroundImage(String URL){
