@@ -9,12 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="Added logs page instead of user information">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Log.java" afterDir="false" />
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="added log display and and simple filter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/LogsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LogsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/GetLogs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/GetLogs.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637114172340</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="added log display and and simple filter">
+      <created>1637119996641</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1637119996641</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -407,7 +411,8 @@
     <MESSAGE value="added regex check to contact during order confirm" />
     <MESSAGE value="Fixed bug with gridpane in PhotographsListController" />
     <MESSAGE value="Added logs page instead of user information" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logs page instead of user information" />
+    <MESSAGE value="added log display and and simple filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="added log display and and simple filter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
