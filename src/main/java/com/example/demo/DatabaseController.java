@@ -36,7 +36,7 @@ public final class DatabaseController {
     private static final String PHOTOGRAPH_UPDATE_QUERY = "UPDATE photographs SET photograph_name = ?, description = ? WHERE id = ?";
     private static final String PHOTOGRAPH_DELETE_QUERY = "DELETE FROM photographs WHERE id = ?";
     private static final String PHOTOGRAPH_INSERT_QUERY = "INSERT INTO photographs (photograph_name, description) VALUES (?,?)";
-    private static final String LOGS_INSERT_QUERY ="INSERT INTO Logs (\"user\", action, \"table\", result) VALUES (?,?,?,?)";
+    private static final String LOGS_INSERT_QUERY ="INSERT INTO Logs (\"user\", action, \"table\") VALUES (?,?,?)";
     private static final String LOGS_SELECT_QUERY ="SELECT * FROM Logs";
     private static Connection connection;
 
@@ -194,7 +194,7 @@ public final class DatabaseController {
                                     resultSet.getString("user"),
                                     resultSet.getString("action"),
                                     resultSet.getString("table"),
-                                    resultSet.getString("result"))
+                                    resultSet.getDate("date"))
                             );
                         }
                     }
@@ -256,10 +256,10 @@ public final class DatabaseController {
                 preparedStatement.execute();
                 switch (inputvalue){
                     case (1):
-                        insertLog(User.getLogin(),"Orders","FINISHED",Integer.toString(id));
+                        insertLog(User.getLogin(),"Orders","FINISHED");
                         break;
                     case (-1):
-                        insertLog(User.getLogin(),"Orders","CANCELED",Integer.toString(id));
+                        insertLog(User.getLogin(),"Orders","CANCELED");
                         break;
                 }
             } catch (SQLException e) {
@@ -275,7 +275,7 @@ public final class DatabaseController {
                 preparedStatement.setString(2,description);
                 preparedStatement.setInt(3, id);
                 preparedStatement.executeUpdate();
-                insertLog(User.getLogin(),"Photographs","CHANGED",photograph);
+                insertLog(User.getLogin(),"Photographs","CHANGED");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -287,7 +287,7 @@ public final class DatabaseController {
                  PreparedStatement preparedStatement = connection.prepareStatement(PHOTOGRAPH_DELETE_QUERY)) {
                 preparedStatement.setInt(1, id);
                 preparedStatement.execute();
-                insertLog(User.getLogin(),"Photographs","DELETED",Integer.toString(id));
+                insertLog(User.getLogin(),"Photographs","DELETED");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -300,20 +300,19 @@ public final class DatabaseController {
                 preparedStatement.setString(1, name);
                 preparedStatement.setString(2, Description);
                 preparedStatement.execute();
-                insertLog(User.getLogin(),"Photographs","ADDED",name);
+                insertLog(User.getLogin(),"Photographs","ADDED");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
     }
-    public static void insertLog(String user, String table, String action, String result){
+    public static void insertLog(String user, String table, String action){
         if (DatabaseController.getUserStatus(User.getLogin())) {
             try (Connection connection = getConnection();
                  PreparedStatement preparedStatement = connection.prepareStatement(LOGS_INSERT_QUERY)) {
                 preparedStatement.setString(1, user);
                 preparedStatement.setString(2, action);
                 preparedStatement.setString(3, table);
-                preparedStatement.setString(4, result);
                 preparedStatement.execute();
             } catch (SQLException e) {
                 e.printStackTrace();

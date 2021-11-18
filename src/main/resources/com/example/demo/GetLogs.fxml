@@ -14,7 +14,7 @@
           <TableColumn fx:id="usercol" prefWidth="104.0" text="user" />
           <TableColumn fx:id="actioncol" prefWidth="139.0" text="action" />
             <TableColumn fx:id="tablecol" prefWidth="114.0" text="table" />
-            <TableColumn fx:id="resultcol" minWidth="0.0" prefWidth="148.0" text="before" />
+            <TableColumn fx:id="resultcol" minWidth="0.0" prefWidth="148.0" text="date" />
         </columns>
       </TableView>
       <ComboBox fx:id="ActionBox" layoutX="119.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />

@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="added log display and and simple filter">
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="fixed filtering to logs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/LogsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LogsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/GetLogs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/GetLogs.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -360,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637119996641</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="fixed filtering to logs">
+      <created>1637226657633</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1637226657633</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -412,7 +421,8 @@
     <MESSAGE value="Fixed bug with gridpane in PhotographsListController" />
     <MESSAGE value="Added logs page instead of user information" />
     <MESSAGE value="added log display and and simple filter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added log display and and simple filter" />
+    <MESSAGE value="fixed filtering to logs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed filtering to logs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

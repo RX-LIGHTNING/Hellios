@@ -1,10 +1,12 @@
 package com.example.demo;
 
+import java.sql.Date;
+
 public class Log {
     public String user;
     public String action;
     public String table;
-    public String result;
+    public java.sql.Date date;
 
     public String getUser() {
         return user;
@@ -31,17 +33,17 @@ public class Log {
     }
 
     public String getResult() {
-        return result;
+        return date.toString();
     }
 
     public void setResult(String result) {
-        this.result = result;
+        this.date = date;
     }
 
-    public Log(String user, String action, String table, String result) {
+    public Log(String user, String action, String table, Date result) {
         this.user = user;
         this.action = action;
         this.table = table;
-        this.result = result;
+        this.date = result;
     }
 }
