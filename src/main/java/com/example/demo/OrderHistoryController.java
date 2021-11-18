@@ -125,7 +125,7 @@ public class OrderHistoryController implements Initializable {
     }
     public void printAgreement() throws IOException, InvalidFormatException {
         Order temp = Table.getSelectionModel().getSelectedItem();
-        if(Objects.nonNull(temp)) {
+        if(Objects.nonNull(temp) && Objects.equals(temp.getStatus(), "In progress.") ||Objects.equals(temp.getStatus(), "Done.")) {
             XWPFDocument document = new XWPFDocument(OPCPackage.open("input.docx"));
             for (XWPFParagraph paragraph : document.getParagraphs()) {
                 for (XWPFRun run : paragraph.getRuns()) {
