@@ -17,6 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import org.postgresql.core.Notification;
 
 import java.io.*;
@@ -24,8 +25,6 @@ import java.net.URL;
 import java.util.*;
 
 public final class MainMenuController implements Initializable {
-    private double xOffset = 0;
-    private double yOffset = 0;
     @FXML
     private GridPane PhotoGrid;
     @FXML
@@ -44,12 +43,16 @@ public final class MainMenuController implements Initializable {
     private Button adminbutton11;
     @FXML
     private ImageView BackgroundImage;
+    @FXML
+    private VBox NavBarBox;
+    @FXML
+    private Button mainmenubutton1;
+    @FXML
+    private Button mainmenubutton2;
+    @FXML
+    private Button mainmenubutton3;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-     adminbutton.setVisible(false);
-     adminbutton1.setVisible(false);
-     adminbutton11.setVisible(false);
-
         try {
             Scanner scanner = new Scanner(new File("Options.dat"));
             if(scanner.hasNextLine()){
@@ -67,11 +70,16 @@ public final class MainMenuController implements Initializable {
             e.printStackTrace();
         }
 
-        if(User.getStatus()){
-         adminbutton.setVisible(true);
-         adminbutton1.setVisible(true);
-         adminbutton11.setVisible(true);
+        if(!User.getStatus()){
+            NavBarBox.getChildren().remove(adminbutton);
+            NavBarBox.getChildren().remove(adminbutton1);
+            NavBarBox.getChildren().remove(adminbutton11);
      }
+        else {
+            NavBarBox.getChildren().remove(mainmenubutton1);
+            NavBarBox.getChildren().remove(mainmenubutton2);
+            NavBarBox.getChildren().remove(mainmenubutton3);
+        }
     }
 
 
@@ -80,7 +88,6 @@ public final class MainMenuController implements Initializable {
     protected void exitApplication() {
         System.exit(1);
     }
-
     @FXML
     public void setPhotographsListSlide() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader();
