@@ -2,9 +2,7 @@ package com.example.demo;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.Menu;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -14,11 +12,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
-public class OptionsController {
+public class OptionsController{
     public Text currentContact;
+    @FXML
+    private CheckBox radiobutton;
     @FXML
     private TextField PictureURL;
     @FXML
@@ -46,6 +47,10 @@ public class OptionsController {
     public void setData(MainMenuController mainMenuController) {
         ParentController = mainMenuController;
         currentContact.setText("Current contact information: "+User.getContact());
+        Button temp = (Button) ParentController.NavBarBox.getChildren().get(2);
+        if(Objects.equals(temp.getText(), "Main")){
+            radiobutton.setSelected(true);
+        }
     }
     public void changeContacts(){
         if(!ContactTextField.getText().isEmpty() &&Pattern.matches("\\+\\d{12}",ContactTextField.getText()))  {
@@ -55,6 +60,14 @@ public class OptionsController {
         }
         else{
             ContactTextField.setStyle("-fx-border-color:red;");
+        }
+    }
+    public void casualFunctionReturn(){
+        if(radiobutton.isSelected()){
+            ParentController.backCasualMenu();
+        }
+        else {
+            ParentController.deleteCasualMenu();
         }
     }
     public void backgroundFileSelecter() throws IOException {
@@ -67,4 +80,5 @@ public class OptionsController {
         Path pathAbsolute = Paths.get(fileChooser.showOpenDialog(stage).getPath());
         PictureURL.setText(pathAbsolute.toString());
     }
+
 }

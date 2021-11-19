@@ -34,15 +34,13 @@ public final class MainMenuController implements Initializable {
     @FXML
     private Button adminbutton1;
     @FXML
-    private Pane MainPane;
-    @FXML
     public BorderPane NotificationBar;
     @FXML
     private Button adminbutton11;
     @FXML
     private ImageView BackgroundImage;
     @FXML
-    private VBox NavBarBox;
+    public VBox NavBarBox;
     @FXML
     private Button mainmenubutton1;
     @FXML
@@ -79,8 +77,16 @@ public final class MainMenuController implements Initializable {
             NavBarBox.getChildren().remove(mainmenubutton3);
         }
     }
-
-
+    public void backCasualMenu(){
+        NavBarBox.getChildren().add(2,mainmenubutton1);
+        NavBarBox.getChildren().add(3,mainmenubutton2);
+        NavBarBox.getChildren().add(4,mainmenubutton3);
+    }
+    public void deleteCasualMenu(){
+        NavBarBox.getChildren().remove(mainmenubutton1);
+        NavBarBox.getChildren().remove(mainmenubutton2);
+        NavBarBox.getChildren().remove(mainmenubutton3);
+    }
 
     @FXML
     protected void exitApplication() {
