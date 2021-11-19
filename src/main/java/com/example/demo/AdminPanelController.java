@@ -2,6 +2,7 @@ package com.example.demo;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -74,14 +75,23 @@ public class AdminPanelController implements Initializable {
 
         Order temp = AdminTable.getSelectionModel().getSelectedItem();
         if(temp.getStatus()=="In progress.") {
-            DatabaseController.updateOrder(temp.getId(), 1);
+            DatabaseController.updateOrder(temp.getId(), 2);
             updateTable(FilterField.getText());
             ParentController.createNotification("Order has been finished", 3000);
         }
     }
+
+    public void InprogressOrder() throws IOException {
+        Order temp = AdminTable.getSelectionModel().getSelectedItem();
+        if(temp.getStatus()=="Verifying.") {
+            DatabaseController.updateOrder(temp.getId(), 1);
+            updateTable(FilterField.getText());
+            ParentController.createNotification("Order has been updated", 3000);
+        }
+    }
     public void CancelOrder() throws IOException {
         Order temp = AdminTable.getSelectionModel().getSelectedItem();
-        if(temp.getStatus()=="In progress.") {
+        if(temp.getStatus()!="Canceled.") {
             DatabaseController.updateOrder(temp.getId(), -1);
             updateTable(FilterField.getText());
             ParentController.createNotification("Order has been canceled", 3000);

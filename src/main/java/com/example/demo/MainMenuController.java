@@ -26,8 +26,6 @@ import java.util.*;
 
 public final class MainMenuController implements Initializable {
     @FXML
-    private GridPane PhotoGrid;
-    @FXML
     private Label Username;
     @FXML
     public BorderPane UIworkspace;
