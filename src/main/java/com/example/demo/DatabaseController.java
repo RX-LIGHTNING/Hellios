@@ -27,7 +27,6 @@ public final class DatabaseController {
     private static final String USER_SELECT_QUERY = "SELECT * FROM users WHERE login = ? AND password = ?";
     private static final String IS_USER_EXIST_QUERY = "SELECT * FROM users WHERE login = ?";
     private static final String USER_STATUS_SELECT_QUERY = "SELECT * FROM users WHERE login = ?";
-    private static final String USER_SELECT_INFO_QUERY = "SELECT * FROM users WHERE id = ?";
     private static final String USER_UPDATE_QUERY = "UPDATE users SET contacts = ? WHERE login = ?";
     private static final String PHOTOGRAPH_SELECT_QUERY = "SELECT * FROM photographs";
     private static final String ORDERS_SELECT_QUERY = "SELECT * FROM orders WHERE user_id = ?";

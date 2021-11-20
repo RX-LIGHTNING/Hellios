@@ -48,8 +48,14 @@ public class OptionsController{
         ParentController = mainMenuController;
         currentContact.setText("Current contact information: "+User.getContact());
         Button temp = (Button) ParentController.NavBarBox.getChildren().get(2);
-        if(Objects.equals(temp.getText(), "Main")){
-            radiobutton.setSelected(true);
+        if(User.getStatus()) {
+            radiobutton.setVisible(true);
+            if (Objects.equals(temp.getText(), "Main")) {
+                radiobutton.setSelected(true);
+            }
+        }
+        else {
+            radiobutton.setVisible(false);
         }
     }
     public void changeContacts(){
