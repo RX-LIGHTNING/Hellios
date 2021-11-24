@@ -9,8 +9,18 @@
     -fx-border-color:none;
 }
 #orderbutton{
-                -fx-border-color:none;
-            }
+      -fx-border-color:none;
+}
+#Orderbut{
+      -fx-border-color:none;
+      -fx-background-color:  #191919;
+}
+#Orderbut:hover{
+-fx-border-color:none;
+     -fx-background-color: #3f3f3f;
+         -fx-text-fill: white;
+
+}
 #SgnOutBtn{
 	-fx-font-size: 11pt;
     -fx-font-family: "Organetto";

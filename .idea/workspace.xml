@@ -9,10 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="added one more setting for admins">
+    <list default="true" id="aa122e54-fb5b-41f0-9ffa-60b1294127e9" name="Changes" comment="hide admin function in settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/DatabaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/OptionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/OptionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Photo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Photo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographLabel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/PhotographLabel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/demo/Styles/DarkTheme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/demo/Styles/DarkTheme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637311125657</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="hide admin function in settings">
+      <created>1637387943720</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1637387943720</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -432,7 +441,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Controllers rename and norification metod." />
     <MESSAGE value="Controllers rename and notification metod." />
     <MESSAGE value="Added admin tool" />
     <MESSAGE value="Added photographers list edit for admin accounts" />
@@ -457,7 +465,8 @@
     <MESSAGE value="Improved navbar interface" />
     <MESSAGE value="added another type of order statement" />
     <MESSAGE value="added one more setting for admins" />
-    <option name="LAST_COMMIT_MESSAGE" value="added one more setting for admins" />
+    <MESSAGE value="hide admin function in settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide admin function in settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
